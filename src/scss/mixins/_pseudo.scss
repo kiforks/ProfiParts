@@ -67,6 +67,7 @@
 
 @mixin focus-scale-opacity {
   transition: $transition-duration ease-in-out;
+  outline: 0;
 
   &:hover,
   &:focus {

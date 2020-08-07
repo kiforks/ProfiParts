@@ -9,6 +9,7 @@
     "stylelint-config-htmlacademy"
   ],
   "rules": {
+    "color-hex-case": "upper",
     "no-empty-source": null,
     "plugin/declaration-block-no-ignored-properties": true,
     "order/order": [

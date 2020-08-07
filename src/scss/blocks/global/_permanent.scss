@@ -9,8 +9,8 @@ html {
 }
 
 body {
-  min-width: $mobile-width;
-  max-width: $desktop-width;
+  min-width: 320px;
+  max-width: 1920px;
   font-weight: $font-weight;
   font-size: $font-size;
   line-height: $line-height;
@@ -42,7 +42,8 @@ iframe {
   border: none;
 }
 
-path {
+path,
+g {
   fill: inherit;
 }
 
@@ -55,5 +56,5 @@ button {
 
 ::selection {
   color: white;
-  background-color: #004fe4;
+  background-color: #004FE4;
 }

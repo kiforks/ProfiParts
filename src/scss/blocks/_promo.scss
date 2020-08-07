@@ -1,0 +1,131 @@
+.promo {
+  padding-bottom: 57px;
+  color: white;
+  background-color: #0F0F11;
+  background-image: url("../img/svg/promo/logo.svg"), url("../img/main/promo/car.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 4.55% 2%, 0 0;
+  background-size: 41%, cover;
+}
+
+.promo__container {
+  margin-bottom: 93px;
+  padding-top: 412px;
+}
+
+.promo__title {
+  @include reset-margin-text;
+  @include center-margin;
+  position: relative;
+  width: 60%;
+  padding-bottom: 29px;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 60px;
+  text-align: center;
+  text-shadow: -16px 24px 24px rgba(0, 0, 0, 0.25);
+
+  @include after {
+    @include center-transform-horizon;
+    bottom: 0;
+    z-index: 100;
+    width: 13%;
+    height: 2px;
+    background-color: white;
+  }
+}
+
+.promo__gear {
+  width: 275px;
+  height: 275px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+//Desktop Middle
+@include desktop-middle {
+  .promo {
+    background-size: 41%, 100%;
+  }
+
+  .promo__container {
+    margin-bottom: 60px;
+    padding-top: 250px;
+  }
+
+  .promo__title {
+    font-size: 50px;
+    line-height: 120%;
+  }
+
+  .promo__gear {
+    width: 225px;
+    height: 225px;
+  }
+}
+
+//Desktop small
+@include desktop-small {
+  .promo {
+    padding-bottom: 35px;
+  }
+
+  .promo__container {
+    margin-bottom: 35px;
+    padding-top: 220px;
+  }
+
+  .promo__title {
+    font-size: 45px;
+  }
+
+  .promo__gear {
+    width: 190px;
+    height: 190px;
+  }
+}
+
+//Tablet
+@include tablet {
+  .promo {
+    padding-bottom: 30px;
+  }
+
+  .promo__container {
+    margin-bottom: 25px;
+    padding-top: 140px;
+  }
+
+  .promo__title {
+    padding-bottom: 10px;
+    font-size: 25px;
+  }
+
+  .promo__gear {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+//Mobile
+@include mobile {
+  .promo {
+    padding-bottom: 15px;
+  }
+
+  .promo__container {
+    margin-bottom: 15px;
+    padding-top: 60px;
+  }
+
+  .promo__title {
+    width: 100%;
+    padding-bottom: 5px;
+    font-size: 16px;
+  }
+
+  .promo__gear {
+    width: 32px;
+    height: 32px;
+  }
+}

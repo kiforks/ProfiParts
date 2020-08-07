@@ -141,6 +141,7 @@ function css() {
 
 function stylelint() {
   return src(path.src.scss)
+    .pipe(plumber())
     .pipe(gulpStylelint({
       failAfterError: false,
       reporters: [
@@ -154,7 +155,7 @@ function stylelint() {
 }
 
 function orderCSS () {
-  return src('build/css/*.css')
+  return src('build/css/style.css')
     .pipe(csscomb())
     .pipe(dest(path.build.css));
 }
@@ -366,8 +367,8 @@ function libs() {
 const javaScript = gulp.parallel(js, jsPlugins);
 const styles = gulp.series(css, stylelint, orderCSS);
 const fonts = gulp.series(ttfConversion, woffConversion);
-const imaging = gulp.series(ignoredImages, favIcons, sprite, sortingImages, /* retina,   webpBuild, */  images);
-const build = gulp.series(clean, gulp.parallel(imaging, videoBuild, css, html, javaScript, libs, fonts));
+const imaging = gulp.series(ignoredImages, sprite, sortingImages, /* retina,   webpBuild, */  images);
+const build = gulp.series(clean, gulp.parallel(gulp.series(imaging, html), favIcons, videoBuild, css, javaScript, libs, fonts));
 const watch = gulp.parallel(watchFiles, serve);
 
 

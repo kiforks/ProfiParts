@@ -1,0 +1,375 @@
+.header {
+  @include padding-vertical(1.7%, 2%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  font-weight: 600;
+  line-height: 20px;
+  color: $light-black;
+  background-color: white;
+}
+
+.header__container {
+  @include flex;
+  @include padding-horizon(2%, 2.6%);
+}
+
+.header__logo-box {
+  width: 16.5%;
+  margin-right: 4.7%;
+}
+
+.header__logo {
+  @include reset-margin-text;
+}
+
+.header__list {
+  @include reset-list;
+  @include flex;
+  justify-content: space-between;
+  width: 67%;
+}
+
+.header__image {
+  @include object-fit(contain);
+  width: 100%;
+}
+
+.header__button {
+  display: none;
+}
+
+.header__nav {
+  @include flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 57%;
+}
+
+.header__inner {
+  @include flex;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.header__link {
+  &--active {
+    position: relative;
+    cursor: default;
+
+    @include after {
+      @include center-transform-horizon;
+      bottom: -4px;
+      z-index: 100;
+      width: 90%;
+      height: 2px;
+      background-color: $black;
+    }
+  }
+
+  &:not(.header__link--active) {
+    @include focus-opacity;
+  }
+}
+
+.header__shop,
+.header__vacancies {
+  @include focus-opacity;
+}
+
+
+.header__main-link-box {
+  @include flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.header__main-link {
+  padding-left: 16%;
+
+  @include active {
+    .header__icon {
+      &--phone {
+        animation: none;
+      }
+    }
+  }
+}
+
+.header__icon {
+  display: inline-block;
+
+  &--phone {
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+    animation: vibrate 6s linear infinite;
+  }
+
+  &--basket {
+    margin-top: -4px;
+    margin-right: 12px;
+    fill: $red;
+  }
+}
+
+.header__shop {
+  @include flex;
+  display: inline-block;
+  align-items: center;
+  color: $red;
+}
+
+.header__vacancies {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1750px) {
+  .header {
+    font-size: 14px;
+  }
+}
+
+//Desktop Middle
+@include desktop-middle {
+  .header {
+    font-size: 12px;
+  }
+
+  .header__main-link {
+    padding-left: 30px;
+  }
+}
+
+//Desktop Small
+@include desktop-small {
+  .header {
+    font-size: 10px;
+  }
+
+  .header__logo-box {
+    margin-right: 2%;
+  }
+
+  .header__inner {
+    width: 31%;
+  }
+}
+
+//Tablet
+@include tablet {
+  .header {
+    display: flex;
+    min-height: 86px;
+    font-size: 16px;
+    line-height: 26px;
+
+    &--active {
+      .header__nav {
+        position: absolute;
+        top: 100%;
+        z-index: 100;
+        width: 45%;
+        height: auto;
+        border-top: 1px solid $black;
+        border-left: 1px solid $black;
+      }
+
+      .header__button {
+        background-color: transparent;
+
+        @include before-clean {
+          box-shadow: none;
+          transform: rotate(45deg);
+        }
+
+        @include after-clean {
+          height: 2px;
+          transform: rotate(-45deg);
+        }
+      }
+
+      .header__inner,
+      .header__item {
+        position: static;
+        opacity: 1;
+      }
+    }
+  }
+
+  .header__container {
+    @include padding-tablet;
+    @include center-margin;
+    justify-content: space-between;
+    width: $tablet-width;
+  }
+
+  .header__logo-box {
+    width: 35%;
+    margin-right: 0;
+  }
+
+  .header__nav {
+    position: absolute;
+    top: -1000px;
+    right: 0;
+    height: 0;
+    transition: height 0.5s ease;
+    //transition: transform 0.5s ease-in-out;
+  }
+
+  .header__button-box {
+    display: flex;
+    align-items: center;
+  }
+
+  .header__button {
+    @include reset-button;
+    @include focus-scale-opacity;
+    @include transition;
+    position: relative;
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+
+    @include before-after {
+      @include transition;
+      left: 0;
+      z-index: 100;
+      width: 100%;
+      background-color: $black;
+    }
+
+    @include before {
+      @include center-transform-vertical;
+      height: 2px;
+      box-shadow: 0 7px 0 0 $black,
+        0 -7px 0 0 $black;
+    }
+  }
+
+  .header__main-link-box {
+    margin-right: 20px;
+    transition: top $transition-duration ease;
+  }
+
+  .header__list {
+    width: 100%;
+  }
+
+  .header__inner,
+  .header__item {
+    position: absolute;
+    top: -1000px;
+    @include padding-tablet;
+    @include transition-fade;
+    @include transition-fade;
+    width: 100%;
+    text-align: right;
+    background-color: white;
+    border-bottom: 1px solid $black;
+    opacity: 0;
+    @include transition;
+  }
+
+  .header__item {
+    @include padding-vertical(8px);
+  }
+
+  .header__inner {
+    @include padding-vertical(12px, 10px);
+    font-size: 12px;
+  }
+
+  .header__link--active {
+    position: relative;
+    padding-bottom: 0;
+
+    @include after-clean {
+      display: none;
+    }
+  }
+
+  .header__shop {
+    order: 10;
+  }
+
+  .header__icon {
+    &--basket {
+      order: 10;
+      margin-right: 0;
+      margin-left: 10px;
+    }
+  }
+}
+
+//Mobile
+@include mobile {
+  .header {
+    min-height: auto;
+
+    &--active {
+      .header__nav {
+        right: auto;
+        left: 0;
+        width: 100%;
+        border-left: 0;
+      }
+
+      .header__container {
+        padding-bottom: 0;
+      }
+
+      .header__main-link-box {
+        @include hidden;
+      }
+
+      .header__main-link {
+        width: 0;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  .header__container {
+    @include padding-mobile;
+    @include transition;
+    width: 100%;
+    padding-bottom: 15px;
+  }
+
+  .header__logo-box {
+    width: 80%;
+  }
+
+  .header__main-link-box {
+    order: 3;
+    width: 100%;
+    margin-right: 0;
+    padding-top: 15px;
+    transition: opacity 1s ease;
+  }
+
+  .header__main-link {
+    padding-left: 45px;
+  }
+
+  .header__item,
+  .header__inner {
+    text-align: left;
+  }
+
+  .header__link {
+    @include transition;
+  }
+
+  .header__nav {
+    right: auto;
+    left: -1000px;
+    transition: left 0.5s ease-in-out;
+  }
+}

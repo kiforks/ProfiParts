@@ -4,7 +4,7 @@ function toggleSelectors(button, selector, accessibility = false, focus = false)
   const acc = () => accessibility ? visuallyHidden : closedSelector;
   const toggleSelector = document.querySelectorAll(`.${selector}`);
   const toggleButton = document.querySelectorAll(`.${button}`);
-  const closedSelector = `${selector}--closed`;
+  const closedSelector = `${selector}--active`;
   const visuallyHidden = 'visually-hidden';
   const hidingClass = acc();
   const focusOpenClass = `${selector}--opened`;
@@ -40,5 +40,7 @@ function toggleSelectors(button, selector, accessibility = false, focus = false)
     })
   }
 }
+
+toggleSelectors('header__button', 'header');
 
 

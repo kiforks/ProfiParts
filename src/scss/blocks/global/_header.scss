@@ -162,6 +162,7 @@
 //Tablet
 @include tablet {
   .header {
+    @include padding-vertical(13px, 15px);
     display: flex;
     min-height: 86px;
     font-size: 16px;
@@ -194,7 +195,6 @@
 
       .header__inner,
       .header__item {
-        position: static;
         opacity: 1;
       }
     }
@@ -217,8 +217,7 @@
     top: -1000px;
     right: 0;
     height: 0;
-    transition: height 0.5s ease;
-    //transition: transform 0.5s ease-in-out;
+    transition: transform;
   }
 
   .header__button-box {
@@ -262,26 +261,47 @@
 
   .header__inner,
   .header__item {
-    position: absolute;
-    top: -1000px;
     @include padding-tablet;
-    @include transition-fade;
-    @include transition-fade;
+    @include transition;
     width: 100%;
     text-align: right;
     background-color: white;
     border-bottom: 1px solid $black;
     opacity: 0;
-    @include transition;
   }
 
   .header__item {
     @include padding-vertical(8px);
+
+    &:nth-of-type(2) {
+      transition-delay: 0.1s;
+    }
+
+    &:nth-of-type(3) {
+      transition-delay: 0.2s;
+    }
+
+    &:nth-of-type(4) {
+      transition-delay: 0.3s;
+    }
+
+    &:nth-of-type(5) {
+      transition-delay: 0.4s;
+    }
+
+    &:nth-of-type(6) {
+      transition-delay: 0.5s;
+    }
   }
 
   .header__inner {
     @include padding-vertical(12px, 10px);
     font-size: 12px;
+    transition-delay: 0.6s;
+
+    &:last-of-type {
+      transition-delay: 0.7s;
+    }
   }
 
   .header__link--active {
@@ -310,11 +330,10 @@
 @include mobile {
   .header {
     min-height: auto;
+    padding-bottom: 10px;
 
     &--active {
       .header__nav {
-        right: auto;
-        left: 0;
         width: 100%;
         border-left: 0;
       }
@@ -324,15 +343,19 @@
       }
 
       .header__main-link-box {
-        @include hidden;
-      }
-
-      .header__main-link {
         width: 0;
+        height: 0;
         margin: 0;
         padding: 0;
+        transform: scale(0);
+        visibility: hidden;
+        opacity: 0;
       }
     }
+  }
+
+  .header__button-box {
+    margin-left: auto;
   }
 
   .header__container {
@@ -351,7 +374,8 @@
     width: 100%;
     margin-right: 0;
     padding-top: 15px;
-    transition: opacity 1s ease;
+    transform: scale(1);
+    transition: opacity 0.5s ease, transform 0.5s ease;
   }
 
   .header__main-link {
@@ -367,9 +391,9 @@
     @include transition;
   }
 
-  .header__nav {
-    right: auto;
-    left: -1000px;
-    transition: left 0.5s ease-in-out;
+  .promo__title {
+    @include after-clean {
+      display: none;
+    }
   }
 }

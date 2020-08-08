@@ -62,7 +62,7 @@
 //Mobile
 @include mobile {
   .button {
-    @include padding-vertical(12px);
+    @include padding-vertical(15px);
     width: 100%;
     font-size: 14px;
   }

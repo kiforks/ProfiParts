@@ -129,6 +129,7 @@ function css() {
         outputStyle: 'expanded'
     }))
     .pipe(groupMedia())
+    .pipe(csscomb())
     .pipe(autoprefixer('last 5 versions'))
     .pipe(dest(path.build.css))
     .pipe(csso())
@@ -152,12 +153,6 @@ function stylelint() {
       ]
     }))
     .pipe(browserSync.stream())
-}
-
-function orderCSS () {
-  return src('build/css/style.css')
-    .pipe(csscomb())
-    .pipe(dest(path.build.css));
 }
 
 
@@ -365,7 +360,7 @@ function libs() {
 
 // Build
 const javaScript = gulp.parallel(js, jsPlugins);
-const styles = gulp.series(css, stylelint, orderCSS);
+const styles = gulp.series(css, stylelint);
 const fonts = gulp.series(ttfConversion, woffConversion);
 const imaging = gulp.series(ignoredImages, sprite, sortingImages, /* retina,   webpBuild, */  images);
 const build = gulp.series(clean, gulp.parallel(gulp.series(imaging, html), favIcons, videoBuild, css, javaScript, libs, fonts));
@@ -404,7 +399,6 @@ exports.images = images;
 exports.js = js;
 exports.favIcons = favIcons;
 exports.stylelint = stylelint;
-exports.orderCSS = orderCSS;
 exports.styles = styles;
 exports.javaScript = javaScript;
 exports.build = build;

@@ -1,7 +1,4 @@
 @mixin hidden {
-  position: absolute;
-  top: -2000px;
-  z-index: -1000;
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -12,8 +9,6 @@
 }
 
 @mixin visible {
-  position: static;
-  z-index: 1000;
   width: auto;
   height: auto;
   margin: 0;

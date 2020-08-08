@@ -55,4 +55,24 @@
 }
 
 
+// Other
+@mixin container-desktop($width) {
+  width: 100%;
+  max-width: $width + ($desktop-padding * 2);
+  @include center-margin;
+  @include padding-desktop;
+}
+
+@mixin container-tablet {
+  width: $tablet-width;
+  @include padding-tablet;
+  @include center-margin;
+}
+
+@mixin container-mobile {
+  width: 100%;
+  @include padding-mobile;
+}
+
+
 

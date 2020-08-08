@@ -17,6 +17,21 @@
         "type": "at-rule",
         "name": "include"
       },
+      {
+        "type": "at-rule",
+        "name": "include",
+        "parameter": "reset"
+      },
+      {
+        "type": "at-rule",
+        "name": "include",
+        "parameter": "padding"
+      },
+      {
+        "type": "at-rule",
+        "name": "include",
+        "parameter": "margin"
+      },
       "custom-properties",
       "declarations",
       {

@@ -1,0 +1,40 @@
+@mixin button-hover {
+  & {
+    @include transition;
+  }
+
+  @include hover {
+    box-shadow: -6px 10px 10px rgba(0, 0, 0, 0.06);
+    transform: scale(0.99);
+  }
+
+  @include active {
+    box-shadow: -4px 6px 6px rgba(0, 0, 0, 0.04);
+    transform: scale(0.98);
+    opacity: $hover-opacity;
+  }
+
+  //Desktop middle
+  @include desktop-middle {
+    @include hover {
+      box-shadow: -4px 8px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    @include active {
+      box-shadow: -1px 2px 2px rgba(0, 0, 0, 0.04);
+    }
+  }
+
+  //Tablet
+  @include tablet {
+    @include hover {
+      box-shadow: -2px 4px 4px rgba(0, 0, 0, 0.06);
+    }
+
+    @include active {
+      box-shadow: -1px 2px 2px rgba(0, 0, 0, 0.04);
+    }
+  }
+}
+
+

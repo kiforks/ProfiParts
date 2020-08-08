@@ -9,6 +9,8 @@ html {
 }
 
 body {
+  @include center-margin;
+  position: relative;
   min-width: 320px;
   max-width: 1920px;
   font-weight: $font-weight;

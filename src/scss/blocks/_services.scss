@@ -1,0 +1,239 @@
+.services {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 27px;
+  color: white;
+}
+
+.services__container {
+  @include padding-horizon(225px);
+  @include center-margin;
+  position: relative;
+  width: 100%;
+  max-width: 1410px + (225px * 2);
+}
+
+.services__list {
+  @include flex;
+  @include reset-list;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.services__item {
+  width: 24.5%;
+}
+
+.services__link {
+  position: relative;
+  display: block;
+  height: 810px;
+
+  @include hover {
+    .services__image {
+      filter: grayscale(0);
+    }
+  }
+}
+
+.services__description {
+  @include reset-margin-text;
+  position: absolute;
+  bottom: 8%;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.services__description-box {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 1%;
+  text-shadow: -16px 24px 24px rgba(0, 0, 0, 0.25);
+
+  @include after {
+    @include center-transform-horizon;
+    bottom: 0;
+    z-index: -1;
+    width: 104%;
+    height: 56%;
+    background-color: $grey;
+  }
+}
+
+.services__image {
+  @include object-fit(cover);
+  @include transition;
+  width: 100%;
+  filter: grayscale(100%);
+}
+
+.services__price {
+  @include flex;
+  @include reset-margin-text;
+  position: absolute;
+  bottom: 38%;
+  width: 100%;
+  padding-right: 23%;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 73px;
+  text-align: right;
+  color: #505256;
+}
+
+.services__price-box {
+  display: inline-block;
+  width: 100%;
+  transform: rotate(2.42deg);
+
+  &--smaller {
+    font-size: 40px;
+    line-height: 49px;
+    color: #7F8084;
+  }
+}
+
+.services__button {
+  position: absolute;
+  right: 3%;
+  bottom: 5px;
+  z-index: 100;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: -16px 24px 24px rgba(0, 0, 0, 0.08);
+
+  @include button-hover;
+
+  @include after {
+    @include center-transform-horizon;
+    top: 9px;
+    z-index: 100;
+    width: 18px;
+    height: 18px;
+    border: 9px solid transparent;
+    border-bottom: 9px solid $black;
+  }
+}
+
+
+//Desktop Middle
+@include desktop-middle {
+  .services {
+    font-size: 18px;
+    line-height: 120%;
+  }
+
+  .services__price {
+    font-size: 45px;
+    line-height: 120%;
+  }
+
+  .services__price-box {
+    &--smaller {
+      font-size: 30px;
+      line-height: 120%;
+    }
+  }
+
+  .services__container {
+    @include padding-horizon(120px);
+  }
+
+  .services__link {
+    height: 694px;
+  }
+
+  .services__button {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+
+//Desktop Small
+@include desktop-small {
+  .services {
+    font-size: 16px;
+  }
+
+  .services__price {
+    font-size: 40px;
+  }
+
+  .services__price-box {
+    &--smaller {
+      font-size: 25px;
+    }
+  }
+
+  .services__link {
+    height: 558px;
+  }
+}
+
+
+//Tablet
+@include tablet {
+  .services {
+    font-size: 14px;
+  }
+
+  .services__price {
+    font-size: 30px;
+  }
+
+  .services__price-box {
+    &--smaller {
+      font-size: 20px;
+    }
+  }
+
+  .services__container {
+    @include padding-tablet;
+    @include center-margin;
+    width: $tablet-width;
+    padding-bottom: 80px;
+  }
+
+  .services__link {
+    height: 406px;
+  }
+}
+
+
+//Mobile
+@include mobile {
+  .services__container {
+    @include padding-mobile;
+    width: 100%;
+    padding-bottom: 60px;
+  }
+
+  .services__item {
+    width: 48%;
+    margin-bottom: 15px;
+  }
+
+  .services__link {
+    height: 371px;
+  }
+
+  .services {
+    font-size: 12px;
+  }
+
+  .services__price {
+    font-size: 25px;
+  }
+
+  .services__price-box {
+    &--smaller {
+      font-size: 17px;
+    }
+  }
+}

@@ -37,6 +37,7 @@
 
 .ref__button {
   justify-content: center;
+
   @include after-clean {
     margin-left: 6.5%;
   }

@@ -1,0 +1,52 @@
+.title {
+  @include reset-margin-text;
+  position: relative;
+  width: 100%;
+  padding-bottom: 30px;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 60px;
+  text-align: center;
+
+  @include after {
+    @include center-transform-horizon;
+    bottom: 0;
+    z-index: 100;
+    width: 109px;
+    height: 2px;
+    background-color: $black;
+  }
+}
+
+//Desktop Middle
+@include desktop-middle {
+  .title {
+    padding-bottom: 25px;
+    font-size: 45px;
+    line-height: 120%;
+  }
+}
+
+//Desktop Small
+@include desktop-small {
+  .title {
+    padding-bottom: 20px;
+    font-size: 40px;
+  }
+}
+
+//Tablet
+@include tablet {
+  .title {
+    padding-bottom: 15px;
+    font-size: 30px;
+  }
+}
+
+//Mobile
+@include mobile {
+  .title {
+    padding-bottom: 10px;
+    font-size: 20px;
+  }
+}

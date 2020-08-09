@@ -152,7 +152,6 @@ function stylelint() {
         }
       ]
     }))
-    .pipe(browserSync.stream())
 }
 
 

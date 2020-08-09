@@ -1,0 +1,191 @@
+.range {
+  @include padding-vertical(3.8%);
+  background-image: url("../img/svg/range/background.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 1300px;
+}
+
+.range__container {
+  @include container(1390px);
+}
+
+.range__title {
+  margin-bottom: 95px;
+}
+
+.range__list {
+  @include flex;
+  @include reset-list;
+}
+
+.range__logo {
+  display: block;
+  width: 180px;
+  height: 135px;
+}
+
+.range__image {
+  @include object-fit(contain);
+  width: 100%;
+}
+
+.range__subtitle {
+  @include reset-margin-text;
+  position: relative;
+  margin-bottom: 4px;
+  font-weight: 600;
+  color: $black;
+
+  @include after {
+    @include center-transform-horizon;
+    bottom: 12px;
+    z-index: -1;
+    width: 104%;
+    height: 12px;
+    background-color: #DCDCDC;
+  }
+}
+
+.range__item {
+  @include flex;
+  justify-content: space-between;
+  width: 39.5%;
+  margin-right: 9.5%;
+  margin-bottom: 4.5%;
+
+  &:nth-of-type(2n+2) {
+    margin-right: 0;
+  }
+
+  &:nth-of-type(3n+3) {
+    margin-left: auto;
+  }
+}
+
+.range__description {
+  @include reset-margin-text;
+  width: 100%;
+  line-height: 22px;
+  color: #777777;
+}
+
+.range__inner {
+  @include flex;
+  width: 61.5%;
+  padding-top: 2.1%;
+}
+
+//Desktop Middle
+@include desktop-middle {
+  .range {
+    background-size: 75%;
+  }
+
+  .range__title {
+    margin-bottom: 75px;
+  }
+
+  .range__logo {
+    width: 150px;
+    height: 113px;
+  }
+
+  .range__inner {
+    font-size: 14px;
+    line-height: 120%;
+  }
+
+  .range__subtitle {
+    @include after-clean {
+      bottom: 5px;
+    }
+  }
+}
+
+//Desktop Small
+@include desktop-small {
+  .range__title {
+    margin-bottom: 60px;
+  }
+
+  .range__logo {
+    width: 120px;
+    height: 91px;
+  }
+
+  .range__inner {
+    font-size: 12px;
+  }
+
+  .range__subtitle {
+    @include after-clean {
+      bottom: -2px;
+      height: 10px;
+    }
+  }
+}
+
+//Tablet
+@include tablet {
+  .range {
+    padding-bottom: 0;
+    background-size: cover;
+  }
+
+  .range__container {
+    @include padding-tablet;
+    @include center-margin;
+    width: $tablet-width;
+  }
+
+  .range__title {
+    margin-bottom: 45px;
+  }
+
+  .range__logo {
+    width: 90px;
+    height: 67px;
+  }
+
+  .range__inner {
+    font-size: 10px;
+  }
+}
+
+//Mobile
+@include mobile {
+  .range__container {
+    @include padding-mobile;
+    width: 100%;
+    padding-top: 25px;
+  }
+
+  .range__title {
+    margin-bottom: 25px;
+  }
+
+  .range__item {
+    justify-content: center;
+    width: 100%;
+    margin: 0 0 15px;
+  }
+
+  .range__logo {
+    width: 140px;
+    height: 105px;
+  }
+
+  .range__inner {
+    @include flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .range__subtitle {
+    margin-bottom: 10px;
+  }
+}
+

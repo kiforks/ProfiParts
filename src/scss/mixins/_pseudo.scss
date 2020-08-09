@@ -3,6 +3,7 @@
   & {
     outline: none;
   }
+
   &:hover,
   &:focus {
     @content;
@@ -13,6 +14,7 @@
   & {
     outline: none;
   }
+
   &:hover,
   &:focus {
     opacity: $hover-opacity;
@@ -76,7 +78,51 @@
 
   &:active {
     transform: scale($down-scale);
-    opacity: $down-opacity;
+  }
+}
+
+@mixin focus-scale-opacity-ba {
+  transition: $transition-duration ease-in-out;
+  outline: 0;
+
+  &:hover::before,
+  &:focus::before,
+  &:hover::after,
+  &:focus::after {
+    transform: scale($hover-scale);
+  }
+
+  &:active::before,
+  &:active::after {
+    transform: scale($down-scale);
+  }
+}
+
+@mixin focus-scale-opacity-b {
+  transition: $transition-duration ease-in-out;
+  outline: 0;
+
+  &:hover::before,
+  &:focus::before {
+    transform: scale($hover-scale);
+  }
+
+  &:active::before {
+    transform: scale($down-scale);
+  }
+}
+
+@mixin focus-scale-opacity-a {
+  transition: $transition-duration ease-in-out;
+  outline: 0;
+
+  &:hover::after,
+  &:focus::after {
+    transform: scale($hover-scale);
+  }
+
+  &:active::after {
+    transform: scale($down-scale);
   }
 }
 

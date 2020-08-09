@@ -1,53 +1,59 @@
-// function initSwiper(slider) {
-//   if(!slider) {
-//     return;
-//   }
-//
-//   let mySwiper = new Swiper(`.${slider.containerClass}`, {
-//     pagination: {
-//       direction: slider.direction || 'horizontal',
-//       el: `.${slider.container}__pagination`,
-//       type: `bullets`,
-//       currentClass: `${slider.container}__current`,
-//       totalClass: `${slider.container}__total`,
-//       bulletClass: `${slider.container}__bullet`,
-//       bulletActiveClass: `${slider.container}__bullet--active`,
-//       clickable: true
-//     },
-//     navigation: {
-//       nextEl: `.${slider.container}__button--next`,
-//       prevEl: `.${slider.container}__button--prev`,
-//       disabledClass: `${slider.container}__button--disabled`,
-//     },
-//     speed: 1000,
-//     loop: true,
-//     spaceBetween: 30,
-//     wrapperClass: `${slider.container}__list`,
-//     slideClass: `${slider.container}__item`,
-//     slideActiveClass: `${slider.container}__item--active`,
-//     slideDuplicateActiveClass: `${slider.container}__item-duplicate--active`,
-//     slideVisibleClass: `${slider.container}__item--visible`,
-//     slideDuplicateClass: `${slider.container}__item-duplicate`,
-//     slideNextClass: `${slider.container}__item--next`,
-//     slideDuplicateNextClass: `${slider.container}__item-duplicate--next`,
-//     slidePrevClass: `${slider.container}__item--prev`,
-//     slideDuplicatePrevClass: `${slider.container}__item-duplicate--prev`,
-//     slideBlankClass: `${slider.container}__invisible-blank`,
-//     bulletClass: `${slider.container}__bullet`,
-//     bulletActiveClass: `${slider.container}__bullet--active`,
-//     modifierClass: `${slider.container}__pagination`,
-//     hiddenClass: `${slider.container}__hidden`,
-//     progressbarFillClass: `${slider.container}__progressbar-fill`,
-//     clickableClass: `${slider.container}__clickable`,
-//     lockClass: `${slider.container}__lock`,
-//     progressbarOppositeClass: `${slider.container}__progressbar-opposite`
-//   });
-// }
-//
-// const mainSlider = {
-//   container: 'swiper',
-//   containerClass: 'swiper',
-//   direction: 'vertical'
-// };
-//
-// initSwiper(mainSlider);
+function initSwiper(slider) {
+  if(!slider) {
+    return;
+  }
+
+  let mySwiper = new Swiper(`.${slider.container}`, {
+    pagination: {
+      el: `.${slider.containerClass}__pagination`,
+      type: `bullets`,
+      currentClass: `${slider.containerClass}__current`,
+      totalClass: `${slider.containerClass}__total`,
+      bulletClass: `${slider.containerClass}__bullet`,
+      bulletActiveClass: `${slider.containerClass}__bullet--active`,
+      clickable: true,
+    },
+    navigation: {
+      nextEl: `.${slider.containerClass}__button--next`,
+      prevEl: `.${slider.containerClass}__button--prev`,
+      disabledClass: `${slider.containerClass}__button--disabled`,
+    },
+    speed: 1000,
+    loop: slider.loop,
+    slidesPerView: slider.slidesPerView || 1,
+    spaceBetween: slider.spaceBetween || 30,
+    freeMode: slider.freeMode,
+    watchSlidesVisibility: slider.watchSlidesVisibility,
+    watchSlidesProgress: slider.watchSlidesProgress,
+    wrapperClass: `${slider.containerClass}__list`,
+    slideClass: `${slider.containerClass}__item`,
+    slideActiveClass: `${slider.containerClass}__item--active`,
+    slideDuplicateActiveClass: `${slider.containerClass}__item-duplicate--active`,
+    slideVisibleClass: `${slider.containerClass}__item--visible`,
+    slideDuplicateClass: `${slider.containerClass}__item-duplicate`,
+    slideNextClass: `${slider.containerClass}__item--next`,
+    slideDuplicateNextClass: `${slider.containerClass}__item-duplicate--next`,
+    slidePrevClass: `${slider.containerClass}__item--prev`,
+    slideDuplicatePrevClass: `${slider.containerClass}__item-duplicate--prev`,
+    slideBlankClass: `${slider.containerClass}__invisible-blank`,
+    bulletClass: `${slider.containerClass}__bullet`,
+    bulletActiveClass: `${slider.containerClass}__bullet--active`,
+    modifierClass: `${slider.containerClass}__pagination`,
+    hiddenClass: `${slider.containerClass}__hidden`,
+    progressbarFillClass: `${slider.containerClass}__progressbar-fill`,
+    clickableClass: `${slider.containerClass}__clickable`,
+    lockClass: `${slider.containerClass}__lock`,
+    progressbarOppositeClass: `${slider.containerClass}__progressbar-opposite`
+  });
+}
+
+const contactsMain = {
+  container: 'contacts__inner',
+  containerClass: 'contacts'
+};
+
+
+initSwiper(contactsMain);
+
+
+

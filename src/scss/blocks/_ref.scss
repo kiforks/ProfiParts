@@ -1,0 +1,86 @@
+.ref {
+  padding-top: 10.1%;
+  padding-bottom: 9.8%;
+  background-image: url("../img/main/ref/photo-1.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+
+.ref__container {
+  @include flex-column;
+  align-items: center;
+}
+
+.ref__title {
+  @include reset-margin-text;
+  @include padding-horizon(8%);
+  position: relative;
+  margin-bottom: 31px;
+  padding-bottom: 30px;
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 60px;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 24px rgba(0, 0, 0, 0.3);
+
+  @include after {
+    @include center-transform-horizon;
+    bottom: 0;
+    z-index: 100;
+    width: 12%;
+    height: 2px;
+    background-color: white;
+  }
+}
+
+.ref__button {
+  justify-content: center;
+  @include after-clean {
+    margin-left: 6.5%;
+  }
+}
+
+.ref__icon {
+  display: inline-block;
+  margin-right: 6%;
+}
+
+//Desktop Middle
+@include desktop-middle {
+  .ref__title {
+    padding-bottom: 20px;
+    font-size: 40px;
+    line-height: 140%;
+  }
+}
+
+//Desktop Small
+@include desktop-small {
+  .ref__title {
+    padding-bottom: 14px;
+    font-size: 35px;
+  }
+}
+
+//Tablet
+@include tablet {
+  .ref__title {
+    padding-bottom: 7px;
+    font-size: 30px;
+  }
+}
+
+//Mobile
+@include mobile {
+  .ref {
+    background-position: right 35% top 0;
+  }
+
+  .ref__title {
+    @include padding-horizon(0);
+    padding-bottom: 5px;
+    font-size: 20px;
+  }
+}

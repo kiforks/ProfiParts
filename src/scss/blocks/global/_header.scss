@@ -98,6 +98,10 @@
       }
     }
   }
+
+  @include after-clean {
+    display: none;
+  }
 }
 
 .header__icon {

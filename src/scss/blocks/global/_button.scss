@@ -1,16 +1,29 @@
 .button {
+  @include flex;
   @include reset-button;
-  @include padding-vertical(12px);
+  @include padding-vertical(15px);
   @include padding-horizon(15px);
-  display: inline-block;
+  position: relative;
+  align-items: center;
   min-width: 261px;
+  font-weight: 600;
+  font-size: 16px;
   line-height: 20px;
   color: $black-second;
-  background: white;
+  background-color: white;
   border-radius: 2px;
   box-shadow: -16px 24px 24px rgba(0, 0, 0, 0.08);
 
   @include button-hover;
+
+  @include after-clean {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 6px solid transparent;
+    border-left: 6px solid $black;
+  }
 }
 
 //Desktop middle
@@ -30,6 +43,12 @@
     font-size: 12px;
     line-height: 120%;
     box-shadow: -5px 10px 10px rgba(0, 0, 0, 0.08);
+
+    @include after-clean {
+      width: 10px;
+      height: 10px;
+      border-width: 5px;
+    }
   }
 }
 
@@ -38,6 +57,7 @@
   .button {
     @include padding-vertical(15px);
     width: 100%;
+    max-width: 315px;
     font-size: 14px;
   }
 }

@@ -1,1 +1,49 @@
+.subtitle {
+  position: relative;
+  padding-bottom: 29px;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 60px;
+
+  @include after {
+    bottom: 0;
+    left: 0;
+    width: 109px;
+    height: 2px;
+    background-color: $black;
+  }
+}
+
+//Desktop Middle
+@include desktop-middle {
+  .subtitle {
+    padding-bottom: 23px;
+    font-size: 35px;
+    line-height: 140%;
+  }
+}
+
+//Desktop Small
+@include desktop-small {
+  .subtitle {
+    padding-bottom: 18px;
+    font-size: 30px;
+  }
+}
+
+//Tablet
+@include tablet {
+  .subtitle {
+    padding-bottom: 10px;
+    font-size: 25px;
+  }
+}
+
+//Mobile
+@include mobile {
+  .subtitle {
+    padding-bottom: 5px;
+    font-size: 20px;
+  }
+}
 

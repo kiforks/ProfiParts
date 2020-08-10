@@ -90,7 +90,6 @@
     .contacts__adds-wrapper {
       @include flex;
       position: static;
-      z-index: 100000;
       visibility: visible;
       opacity: 1;
     }
@@ -146,7 +145,7 @@
   @include transition-fade;
   @include flex-column;
   position: absolute;
-  z-index: -10000;
+  top: -10000px;
   align-items: flex-start;
   visibility: hidden;
   opacity: 0;

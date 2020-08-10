@@ -1,0 +1,174 @@
+.benefits {
+  line-height: 26px;
+  background-color: $blue;
+}
+
+.benefits__container {
+  @include container-desktop(1370px);
+  padding-top: 7.1%;
+  padding-bottom: 6.6%;
+}
+
+.benefits__strong-text {
+  font-weight: 500;
+}
+
+.benefits__list {
+  @include reset-list;
+}
+
+.benefits__item {
+  @include flex;
+  justify-content: space-between;
+  margin-bottom: 11.5%;
+  padding-right: 6.7%;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &:nth-of-type(2n+2) {
+    padding-right: 0;
+
+    .benefits__inner {
+      order: 2;
+      width: 49.6%;
+    }
+
+    .benefits__picture {
+      width: 43%;
+    }
+  }
+}
+
+.benefits__title,
+.benefits__description {
+  @include reset-margin-text;
+}
+
+.benefits__inner {
+  width: 51%;
+  padding-top: 2.6%;
+}
+
+.benefits__picture {
+  position: relative;
+  align-self: flex-start;
+  width: 46%;
+  padding-top: 1.8%;
+  padding-right: 1.7%;
+
+  @include before {
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 97%;
+    height: 93%;
+    border: 2px solid $black;
+  }
+}
+
+.benefits__title {
+  margin-bottom: 62px;
+}
+
+.benefits__photo {
+  height: 327px;
+}
+
+.benefits__image {
+  @include object-fit(cover);
+  width: 100%;
+}
+
+//Desktop Middle
+@include desktop-middle {
+  .benefits {
+    font-size: 14px;
+    line-height: 180%;
+  }
+
+  .benefits__title {
+    margin-bottom: 45px;
+  }
+
+  .benefits__photo {
+    height: 313px;
+  }
+}
+
+//Desktop Small
+@include desktop-small {
+  .benefits {
+    font-size: 13px;
+  }
+
+  .benefits__title {
+    margin-bottom: 35px;
+  }
+
+  .benefits__photo {
+    height: 256px;
+  }
+}
+
+//Tablet
+@include tablet {
+  .benefits {
+    font-size: 10px;
+  }
+
+  .benefits__container {
+    @include container-tablet;
+  }
+
+  .benefits__title {
+    margin-bottom: 25px;
+  }
+
+  .benefits__photo {
+    height: 168px;
+  }
+}
+
+//Mobile
+@include mobile {
+  .benefits__container {
+    @include container-mobile;
+    @include padding-vertical(10%);
+  }
+
+  .benefits__item {
+    width: 100%;
+    padding: 0;
+
+    &:nth-of-type(2n+2) {
+      padding-right: 0;
+
+      .benefits__inner {
+        order: 0;
+        width: 100%;
+      }
+
+      .benefits__picture {
+        width: 100%;
+      }
+    }
+  }
+
+  .benefits__inner {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .benefits__picture {
+    width: 100%;
+    padding-top: 4%;
+    padding-right: 4%;
+  }
+
+  .benefits__photo {
+    height: 154px;
+  }
+}
+

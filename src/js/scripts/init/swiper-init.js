@@ -50,6 +50,9 @@ function initSwiper(slider) {
       },
       768: {
         spaceBetween: slider.spaceBetweenTablet || 15
+      },
+      1200: {
+        spaceBetween: slider.spaceBetween || 30
       }
     }
   });

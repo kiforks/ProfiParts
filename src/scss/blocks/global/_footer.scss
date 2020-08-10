@@ -1,0 +1,39 @@
+.footer {
+  @include padding-vertical(3%);
+  line-height: 26px;
+  color: #CDCDCD;
+  background-color: #18181A;
+}
+
+.footer__copyright {
+  @include reset-margin-text;
+  text-align: center;
+}
+
+//Desktop Middle
+@include desktop-middle {
+  .footer {
+    font-size: 14px;
+  }
+}
+
+//Desktop Small
+@include desktop-small {
+  .footer {
+    font-size: 12px;
+  }
+}
+
+//Tablet
+@include tablet {
+  .footer {
+    font-size: 10px;
+  }
+}
+
+//Mobile
+@include mobile {
+  .footer {
+    @include padding-vertical(15px);
+  }
+}

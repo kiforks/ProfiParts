@@ -21,12 +21,15 @@ function contactsToggle() {
 
   function sliderToggle() {
     sliderList.forEach((slider, index) => {
-      if(sliderList[index].classList.contains('contacts__item--active') && !addressList[index].classList.contains('contacts__address-active')) {
-        console.log(addressList[index]);
-        addressList[index].classList.add('contacts__address--active');
+      if(sliderList[index].classList.contains('contacts__item--active')) {
+        if(addressList[index].classList.contains('contacts__address--active')) {
+          addressList[index].classList.remove('contacts__address--active');
+        } else {
+          addressList[index].classList.add('contacts__address--active');
+        }
       } else {
         addressList[index].classList.remove('contacts__address--active');
-      };
+      }
     })
   }
 

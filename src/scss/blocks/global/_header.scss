@@ -1,16 +1,23 @@
 .header {
+  @include transition-fade;
   @include padding-vertical(1.7%, 2%);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
-  display: none;
   width: 100%;
   max-width: 1920px;
   font-weight: 600;
   line-height: 20px;
   color: $light-black;
   background-color: white;
+  visibility: hidden;
+  opacity: 0;
+
+  &--fixed {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 .header__container {
@@ -170,7 +177,6 @@
   .header {
     @include padding-vertical(13px, 15px);
     //display: flex;
-    display: none;
     min-height: 86px;
     font-size: 16px;
     line-height: 26px;

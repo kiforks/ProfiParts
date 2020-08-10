@@ -12,3 +12,12 @@ for (let anchor of anchors) {
     })
   })
 }
+
+document.addEventListener("scroll", () => {
+  let scrollTop = window.scrollY;
+  const headerWrapper = document.querySelector(".header");
+
+  if (scrollTop > 100) {
+    headerWrapper.classList.add("header--fixed");
+  }
+});

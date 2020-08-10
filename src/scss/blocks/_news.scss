@@ -1,0 +1,313 @@
+.news {
+  @include swiper;
+  line-height: 26px;
+  color: $black-light;
+}
+
+.news__container {
+  @include flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1637px + $desktop-padding;
+  margin-left: auto;
+  padding-left: $desktop-padding;
+}
+
+.news__wrapper {
+  @include flex-column;
+  width: 25%;
+  padding-top: 3.8%;
+}
+
+.news__title {
+  margin-bottom: 59px;
+}
+
+.news__description {
+  @include reset-margin-text;
+  margin-bottom: 52px;
+}
+
+.news__link {
+  align-self: flex-start;
+  padding-left: 7%;
+
+  @include after-clean {
+    margin-left: 7%;
+  }
+}
+
+.news__slider {
+  @include flex-column;
+  align-items: flex-start;
+  width: 73%;
+  padding-right: 12.2%;
+  overflow: hidden;
+}
+
+.news__list {
+  width: 100%;
+  margin-bottom: 2.6%;
+  overflow: visible;
+}
+
+.news__item {
+  padding: 2% 3.5%;
+  background-color: $blue;
+}
+
+.news__photo {
+  height: 162px;
+  margin-bottom: 4.5%;
+}
+
+.news__image {
+  @include object-fit(cover);
+  width: 100%;
+}
+
+.news__subtitle {
+  @include reset-margin-text;
+  position: relative;
+  margin-bottom: 20px;
+  padding-bottom: 17px;
+  font-weight: 600;
+  color: $black;
+
+  @include after {
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    width: 109px;
+    height: 2px;
+    background-color: $black;
+  }
+}
+
+.news__slide-description {
+  @include reset-margin-text;
+  margin-bottom: 8px;
+}
+
+.news__time {
+  display: block;
+  line-height: 28px;
+  text-align: right;
+  color: #949494;
+}
+
+.news__buttons {
+  @include flex;
+  justify-content: space-between;
+}
+
+.news__button {
+  @include focus-opacity;
+  @include reset-button;
+  position: relative;
+  width: 24px;
+  height: 24px;
+
+  @include after {
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    border: 12px solid transparent;
+    border-left: 12px solid $black;
+  }
+
+  &--prev {
+    transform: translateX(-50%);
+
+    @include after-clean {
+      transform: rotate(180deg);
+    }
+  }
+
+  &--disabled {
+    @include after-clean {
+      border-left-color: $grey;
+      cursor: default;
+    }
+
+    @include disabled-focus-opacity();
+  }
+}
+
+//Desktop Middle
+@include desktop-middle {
+  .news {
+    font-size: 14px;
+    line-height: 180%;
+  }
+
+  .news__title {
+    margin-bottom: 45px;
+  }
+
+  .news__description {
+    margin-bottom: 35px;
+  }
+
+  .news__photo {
+    height: 137px;
+  }
+
+  .news__subtitle {
+    margin-bottom: 15px;
+    padding-bottom: 12px;
+
+    @include after {
+      width: 90px;
+    }
+  }
+
+  .news__slide-description {
+    margin-bottom: 5px;
+  }
+}
+
+//Desktop Small
+@include desktop-small {
+  .news {
+    font-size: 12px;
+  }
+
+  .news__title {
+    margin-bottom: 30px;
+  }
+
+  .news__description {
+    margin-bottom: 25px;
+  }
+
+  .news__photo {
+    height: 112px;
+  }
+
+  .news__subtitle {
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+
+    @include after {
+      width: 80px;
+    }
+  }
+}
+
+//Tablet
+@include tablet {
+  .news__container {
+    @include container-tablet;
+  }
+
+  .news {
+    font-size: 10px;
+  }
+
+  .news__title {
+    margin-bottom: 20px;
+  }
+
+  .news__description {
+    margin-bottom: 15px;
+  }
+
+  .news__photo {
+    height: 75px;
+  }
+
+  .news__subtitle {
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+
+    @include after {
+      width: 80px;
+    }
+  }
+
+  .news__link {
+    min-width: 185px;
+  }
+}
+
+//Mobile
+@include mobile {
+  .news__container {
+    @include container-mobile;
+  }
+
+  .news__title {
+    margin-bottom: 10px;
+  }
+
+  .news__wrapper {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .news__description {
+    margin-bottom: 15px;
+  }
+
+  .news__photo {
+    height: 99px;
+  }
+
+  .news__link {
+    @include padding-horizon(45px);
+  }
+
+  .news__item {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+
+  .news__slider {
+    width: 100%;
+    padding: 0;
+  }
+
+  .news__subtitle {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+  }
+
+  .news__buttons {
+    display: none;
+  }
+
+  .news__pagination {
+    @include flex;
+    @include center-margin;
+    justify-content: center;
+  }
+
+  .news__bullet {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    border: 2px solid $black;
+    border-radius: 50%;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &--active {
+      position: relative;
+
+      @include after {
+        @include center-transform;
+        z-index: 10;
+        width: 60%;
+        height: 60%;
+        background-color: $black;
+        border-radius: 50%;
+      }
+    }
+  }
+}

@@ -5,18 +5,18 @@ function initSwiper(slider) {
 
   let mySwiper = new Swiper(`.${slider.container}`, {
     pagination: {
-      el: `.${slider.containerClass}__pagination`,
+      el: `.${slider.blockClass}__pagination`,
       type: `bullets`,
-      currentClass: `${slider.containerClass}__current`,
-      totalClass: `${slider.containerClass}__total`,
-      bulletClass: `${slider.containerClass}__bullet`,
-      bulletActiveClass: `${slider.containerClass}__bullet--active`,
+      currentClass: `${slider.blockClass}__current`,
+      totalClass: `${slider.blockClass}__total`,
+      bulletClass: `${slider.blockClass}__bullet`,
+      bulletActiveClass: `${slider.blockClass}__bullet--active`,
       clickable: true,
     },
     navigation: {
-      nextEl: `.${slider.containerClass}__button--next`,
-      prevEl: `.${slider.containerClass}__button--prev`,
-      disabledClass: `${slider.containerClass}__button--disabled`,
+      nextEl: `.${slider.blockClass}__button--next`,
+      prevEl: `.${slider.blockClass}__button--prev`,
+      disabledClass: `${slider.blockClass}__button--disabled`,
     },
     speed: 1000,
     loop: slider.loop,
@@ -25,35 +25,50 @@ function initSwiper(slider) {
     freeMode: slider.freeMode,
     watchSlidesVisibility: slider.watchSlidesVisibility,
     watchSlidesProgress: slider.watchSlidesProgress,
-    wrapperClass: `${slider.containerClass}__list`,
-    slideClass: `${slider.containerClass}__item`,
-    slideActiveClass: `${slider.containerClass}__item--active`,
-    slideDuplicateActiveClass: `${slider.containerClass}__item-duplicate--active`,
-    slideVisibleClass: `${slider.containerClass}__item--visible`,
-    slideDuplicateClass: `${slider.containerClass}__item-duplicate`,
-    slideNextClass: `${slider.containerClass}__item--next`,
-    slideDuplicateNextClass: `${slider.containerClass}__item-duplicate--next`,
-    slidePrevClass: `${slider.containerClass}__item--prev`,
-    slideDuplicatePrevClass: `${slider.containerClass}__item-duplicate--prev`,
-    slideBlankClass: `${slider.containerClass}__invisible-blank`,
-    bulletClass: `${slider.containerClass}__bullet`,
-    bulletActiveClass: `${slider.containerClass}__bullet--active`,
-    modifierClass: `${slider.containerClass}__pagination`,
-    hiddenClass: `${slider.containerClass}__hidden`,
-    progressbarFillClass: `${slider.containerClass}__progressbar-fill`,
-    clickableClass: `${slider.containerClass}__clickable`,
-    lockClass: `${slider.containerClass}__lock`,
-    progressbarOppositeClass: `${slider.containerClass}__progressbar-opposite`
+    wrapperClass: `${slider.blockClass}__list`,
+    slideClass: `${slider.blockClass}__item`,
+    slideActiveClass: `${slider.blockClass}__item--active`,
+    slideDuplicateActiveClass: `${slider.blockClass}__item-duplicate--active`,
+    slideVisibleClass: `${slider.blockClass}__item--visible`,
+    slideDuplicateClass: `${slider.blockClass}__item-duplicate`,
+    slideNextClass: `${slider.blockClass}__item--next`,
+    slideDuplicateNextClass: `${slider.blockClass}__item-duplicate--next`,
+    slidePrevClass: `${slider.blockClass}__item--prev`,
+    slideDuplicatePrevClass: `${slider.blockClass}__item-duplicate--prev`,
+    slideBlankClass: `${slider.blockClass}__invisible-blank`,
+    bulletClass: `${slider.blockClass}__bullet`,
+    bulletActiveClass: `${slider.blockClass}__bullet--active`,
+    modifierClass: `${slider.blockClass}__pagination`,
+    hiddenClass: `${slider.blockClass}__hidden`,
+    progressbarFillClass: `${slider.blockClass}__progressbar-fill`,
+    clickableClass: `${slider.blockClass}__clickable`,
+    lockClass: `${slider.blockClass}__lock`,
+    progressbarOppositeClass: `${slider.blockClass}__progressbar-opposite`,
+    breakpoints: {
+      320: {
+        slidesPerView: slider.slidesPerViewMobile || 1
+      },
+      768: {
+        spaceBetween: slider.spaceBetweenTablet || 15
+      }
+    }
   });
 }
 
 const contactsMain = {
   container: 'contacts__inner',
-  containerClass: 'contacts'
+  blockClass: 'contacts'
+};
+
+const news = {
+  container: 'news__slider',
+  blockClass: 'news',
+  slidesPerView: 2
 };
 
 
 initSwiper(contactsMain);
+initSwiper(news);
 
 
 

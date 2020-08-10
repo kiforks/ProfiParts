@@ -6,6 +6,10 @@
   margin-bottom: 122px;
 }
 
+.main__news {
+  @include padding-vertical(10.5%);
+}
+
 
 //Desktop middle
 @include desktop-middle {

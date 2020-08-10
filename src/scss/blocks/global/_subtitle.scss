@@ -1,9 +1,11 @@
 .subtitle {
+  @include reset-margin-text;
   position: relative;
   padding-bottom: 29px;
   font-weight: 600;
   font-size: 40px;
   line-height: 60px;
+  color: $black;
 
   @include after {
     bottom: 0;
@@ -17,17 +19,25 @@
 //Desktop Middle
 @include desktop-middle {
   .subtitle {
-    padding-bottom: 23px;
+    padding-bottom: 20px;
     font-size: 35px;
     line-height: 140%;
+
+    @include after-clean {
+      width: 90px;
+    }
   }
 }
 
 //Desktop Small
 @include desktop-small {
   .subtitle {
-    padding-bottom: 18px;
+    padding-bottom: 15px;
     font-size: 30px;
+
+    @include after-clean {
+      width: 80px;
+    }
   }
 }
 
@@ -35,7 +45,11 @@
 @include tablet {
   .subtitle {
     padding-bottom: 10px;
-    font-size: 25px;
+    font-size: 19px;
+
+    @include after-clean {
+      width: 60px;
+    }
   }
 }
 
@@ -43,7 +57,10 @@
 @include mobile {
   .subtitle {
     padding-bottom: 5px;
-    font-size: 20px;
+
+    @include after-clean {
+      width: 40px;
+    }
   }
 }
 

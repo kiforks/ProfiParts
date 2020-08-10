@@ -78,6 +78,22 @@
 
   &:active {
     transform: scale($down-scale);
+    opacity: $down-opacity;
+  }
+}
+
+@mixin disabled-focus-scale-opacity($opacity: 0.35) {
+  cursor: default;
+  opacity: $opacity;
+
+  &:hover,
+  &:focus {
+    transform: translate(0);
+  }
+
+  &:active {
+    transform: translate(0);
+    opacity: $opacity;
   }
 }
 
@@ -126,6 +142,7 @@
   }
 }
 
+
 @mixin focus-color($color: white) {
   outline: 0;
   transition: color $transition-duration ease-in-out, opacity $transition-duration ease-in-out;
@@ -169,9 +186,8 @@
 }
 
 @mixin disabled-focus-opacity($opacity: 1) {
-  & {
-    opacity: $opacity;
-  }
+  cursor: default;
+  opacity: $opacity;
 
   &:active,
   &:hover,

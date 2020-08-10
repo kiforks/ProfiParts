@@ -1,8 +1,7 @@
-<!-- Swiper -->
 <section class="main__contacts contacts">
   <h2 class="title contacts__title">Контакты</h2>
   <div class="contacts__address-container">
-    <div class="contacts__address contacts__address--active">
+    <div class="contacts__address">
       <div class="contacts__box">
         <p class="contacts__city">Винница</p>
         <p class="contacts__street">ул. Маяковского 21,</p>
@@ -124,7 +123,7 @@
     <div class="contacts__address">
       <div class="contacts__box">
         <p class="contacts__city">Харьков</p>
-        <p class="contacts__street">ул. Мерефянское ш. 9а,</p>
+        <p class="contacts__street">Мерефянское ш. 9а,</p>
         <a href="tel:380577601881" class="contacts__tel">+38(057) 760-18-81, ...</a>
         <button type="button" class="contacts__button-toggle">
           <span class="visually-hidden">Подробнее:</span>
@@ -156,33 +155,87 @@
       </div>
     </div>
   </div>
+
   <div class="contacts__wrapper">
-    <div class="contacts__inner">
-      <ul class="contacts__list">
-        <li class="contacts__item">
-          <img src="img/main/contacts/map-1.jpg" alt="Координаты" class="contacts__photo">
+
+  <!--    Перший елемент галереї має бути останнім в галереї з правого боку-->
+
+    <!-- Swiper -->
+    <div class="contacts__inner contacts__inner--main">
+      <ul class="contacts__list contacts__list--main">
+        <li class="contacts__item contacts__item--main">
+          <img src="img/main/contacts/map-1.jpg" alt="Карта" class="contacts__photo">
         </li>
-        <li class="contacts__item">
-          <img src="img/main/contacts/map-2.jpg" alt="Координаты" class="contacts__photo">
+        <li class="contacts__item contacts__item--main">
+          <img src="img/main/contacts/map-2.jpg" alt="Карта" class="contacts__photo">
         </li>
-        <li class="contacts__item">
-          <img src="img/main/contacts/map-3.jpg" alt="Координаты" class="contacts__photo">
+        <li class="contacts__item contacts__item--main">
+          <img src="img/main/contacts/map-3.jpg" alt="Карта" class="contacts__photo">
         </li>
-        <li class="contacts__item">
-          <img src="img/main/contacts/map-4.jpg" alt="Координаты" class="contacts__photo">
+        <li class="contacts__item contacts__item--main">
+          <img src="img/main/contacts/map-4.jpg" alt="Карта" class="contacts__photo">
         </li>
-        <li class="contacts__item">
-          <img src="img/main/contacts/map-5.jpg" alt="Координаты" class="contacts__photo">
+        <li class="contacts__item contacts__item--main">
+          <img src="img/main/contacts/map-5.jpg" alt="Карта" class="contacts__photo">
+        </li>
+        <li class="contacts__item contacts__item--main">
+          <img src="img/main/contacts/map-2.jpg" alt="Карта" class="contacts__photo">
+        </li>
+        <li class="contacts__item contacts__item--main">
+          <img src="img/main/contacts/map-3.jpg" alt="Карта" class="contacts__photo">
+        </li>
+        <li class="contacts__item contacts__item--main">
+          <img src="img/main/contacts/map-4.jpg" alt="Карта" class="contacts__photo">
+        </li>
+        <li class="contacts__item contacts__item--main">
+          <img src="img/main/contacts/map-5.jpg" alt="Карта" class="contacts__photo">
         </li>
       </ul>
       <!-- Add Arrows -->
       <div class="contacts__buttons">
-        <button class="contacts__button contacts__button--prev">Prev</button>
-        <button class="contacts__button contacts__button--next">Next</button>
+        <button class="contacts__button contacts__button--prev">
+          <span class="visually-hidden">Назад</span>
+        </button>
+        <button class="contacts__button contacts__button--next">
+          <span class="visually-hidden">Вперёд</span>
+        </button>
       </div>
     </div>
-    <!-- Add Pagination -->
-    <p class="contacts__pagination"></p>
+    <div class="contacts__thumbs-wrapper">
+      <div class="contacts__inner contacts__inner--thumbs">
+        <ul class="contacts__list contacts__list--thumbs">
+          <li class="contacts__item contacts__item--thumbs">
+            <img src="img/main/contacts/map-1.jpg" alt="Карта" class="contacts__photo">
+          </li>
+          <li class="contacts__item contacts__item--thumbs">
+            <img src="img/main/contacts/map-2.jpg" alt="Карта" class="contacts__photo">
+          </li>
+          <li class="contacts__item contacts__item--thumbs">
+            <img src="img/main/contacts/map-3.jpg" alt="Карта" class="contacts__photo">
+          </li>
+          <li class="contacts__item contacts__item--thumbs">
+            <img src="img/main/contacts/map-4.jpg" alt="Карта" class="contacts__photo">
+          </li>
+          <li class="contacts__item contacts__item--thumbs">
+            <img src="img/main/contacts/map-5.jpg" alt="Карта" class="contacts__photo">
+          </li>
+          <li class="contacts__item contacts__item--thumbs">
+            <img src="img/main/contacts/map-2.jpg" alt="Карта" class="contacts__photo">
+          </li>
+          <li class="contacts__item contacts__item--thumbs">
+            <img src="img/main/contacts/map-3.jpg" alt="Карта" class="contacts__photo">
+          </li>
+          <li class="contacts__item contacts__item--thumbs">
+            <img src="img/main/contacts/map-4.jpg" alt="Карта" class="contacts__photo">
+          </li>
+          <li class="contacts__item contacts__item--thumbs">
+            <img src="img/main/contacts/map-5.jpg" alt="Карта" class="contacts__photo">
+          </li>
+        </ul>
+      </div>
+      <p class="contacts__yet">Ещё +5</p>
+    </div>
   </div>
+
   <a href="#" class="button contacts__button-link">Подробнее</a>
 </section>

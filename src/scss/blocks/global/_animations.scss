@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes spin-negative {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+

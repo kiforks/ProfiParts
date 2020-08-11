@@ -1,0 +1,54 @@
+.anchors {
+  position: fixed;
+  top: 37.4%;
+  left: 11.6%;
+  z-index: 1000;
+  color: white;
+}
+
+.anchors__list {
+  @include flex-column;
+  @include reset-list;
+  align-items: flex-start;
+}
+
+.anchors__item {
+  margin-bottom: 5px;
+}
+
+.anchors__link {
+  @include transition;
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+
+  @include after {
+    @include center-transform;
+    z-index: 100;
+    width: 50%;
+    height: 50%;
+    background-color: #939393;
+    border-radius: 50%;
+  }
+
+  &--active {
+    .anchors__icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+    }
+  }
+}
+
+.anchors__icon {
+  @include transition;
+  opacity: 0;
+  animation: spin 10s infinite linear;
+  fill: #939393;
+}

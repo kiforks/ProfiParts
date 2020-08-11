@@ -13,11 +13,14 @@ for (let anchor of anchors) {
   })
 }
 
-document.addEventListener("scroll", () => {
-  let scrollTop = window.scrollY;
-  const headerWrapper = document.querySelector(".header");
+let scrolltop = pageYOffset;
+const toggleClass = document.querySelector(".header");
 
-  if (scrollTop > 100) {
-    headerWrapper.classList.add("header--fixed");
+window.addEventListener("scroll", function () {
+  if (pageYOffset > scrolltop) {
+    toggleClass.classList.add("header--fixed");
+  } else {
+    toggleClass.classList.remove("header--fixed");
   }
+  scrolltop = pageYOffset;
 });

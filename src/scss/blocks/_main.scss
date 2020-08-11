@@ -4,6 +4,10 @@
   overflow: hidden;
 }
 
+.main__list {
+  @include reset-list;
+}
+
 .main__promo {
   margin-bottom: 122px;
 }

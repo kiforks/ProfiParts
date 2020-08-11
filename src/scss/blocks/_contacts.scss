@@ -263,8 +263,11 @@
   }
 }
 
-.contacts__button-link {
+.contacts__button-box {
   @include center-margin;
+}
+
+.contacts__button-link {
   padding-left: 65px;
 
   @include after-clean {
@@ -436,8 +439,11 @@
     }
   }
 
-  .contacts__button-link {
+  .contacts__button-box {
     margin-bottom: 20px;
+  }
+
+  .contacts__button-link {
     padding-left: 80px;
   }
 

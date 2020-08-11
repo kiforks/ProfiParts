@@ -1,8 +1,12 @@
 .footer {
-  @include padding-vertical(3%);
   line-height: 26px;
   color: #CDCDCD;
   background-color: #18181A;
+  overflow: hidden;
+}
+
+.footer__animation-box {
+  @include padding-vertical(3%);
 }
 
 .footer__copyright {
@@ -33,7 +37,7 @@
 
 //Mobile
 @include mobile {
-  .footer {
+  .footer__animation-box {
     @include padding-vertical(15px);
   }
 }

@@ -1,13 +1,6 @@
-.range {
-  @include padding-vertical(3.8%);
-  background-image: url("../img/svg/range/background.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: 1300px;
-}
-
 .range__container {
   @include container(1390px);
+  @include padding-vertical(3.8%);
 }
 
 .range__title {
@@ -78,10 +71,6 @@
 
 //Desktop Middle
 @include desktop-middle {
-  .range {
-    background-size: 75%;
-  }
-
   .range__title {
     margin-bottom: 75px;
   }

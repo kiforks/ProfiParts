@@ -6,6 +6,7 @@
   z-index: 100;
   width: 100%;
   max-width: 1920px;
+  overflow: hidden;
   font-weight: 600;
   line-height: 20px;
   color: $light-black;
@@ -13,7 +14,6 @@
   visibility: hidden;
   opacity: 0;
   transition: opacity 1s ease-in-out;
-  overflow: hidden;
 
   &--fixed {
     visibility: visible;

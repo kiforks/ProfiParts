@@ -1,10 +1,6 @@
 .ref {
   padding-top: 10.1%;
   padding-bottom: 9.8%;
-  background-image: url("../img/main/ref/photo-1.jpg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: cover;
 }
 
 .ref__container {
@@ -75,13 +71,10 @@
 
 //Mobile
 @include mobile {
-  .ref {
-    background-position: right 35% top 0;
-  }
-
   .ref__title {
     @include padding-horizon(0);
     padding-bottom: 5px;
     font-size: 20px;
   }
 }
+

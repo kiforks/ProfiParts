@@ -4,35 +4,35 @@
   background-color: #0F0F11;
   background-image: url("../img/svg/promo/logo.svg"), url("../img/main/promo/car.jpg");
   background-repeat: no-repeat, no-repeat;
-  background-position: 4.55% 2%, 0 0;
-  background-size: 41%, cover;
+  background-position: 16% 23%, 0 0;
+  background-size: 63%, cover;
 }
 
 .promo__container {
   margin-bottom: 93px;
-  padding-top: 412px;
+  padding-top: 36.3%;
+}
+
+.promo__motion {
+  display: block;
+  color: #333333;
+}
+
+.promo__motion-title {
+  display: block;
+  margin-bottom: 7%;
 }
 
 .promo__title {
   @include reset-margin-text;
   @include center-margin;
-  position: relative;
-  width: 60%;
-  padding-bottom: 29px;
+  width: 55%;
+  margin-bottom: -22%;
   font-weight: 600;
   font-size: 55px;
   line-height: 60px;
   text-align: center;
   text-shadow: -16px 24px 24px rgba(0, 0, 0, 0.25);
-
-  @include after {
-    @include center-transform-horizon;
-    bottom: 0;
-    z-index: 100;
-    width: 13%;
-    height: 2px;
-    background-color: white;
-  }
 }
 
 .promo__gear {
@@ -166,16 +166,17 @@
 //Desktop Middle
 @include desktop-middle {
   .promo {
-    background-size: 41%, 100%;
+    background-size: 63%, 100%;
   }
 
   .promo__container {
     margin-bottom: 60px;
-    padding-top: 250px;
+    padding-top: 34%;
   }
 
   .promo__title {
-    font-size: 50px;
+    margin-bottom: -240px;
+    font-size: 40px;
     line-height: 120%;
   }
 
@@ -227,11 +228,12 @@
 
   .promo__container {
     margin-bottom: 35px;
-    padding-top: 220px;
+    padding-top: 35.2%;
   }
 
   .promo__title {
-    font-size: 45px;
+    margin-bottom: -190px;
+    font-size: 35px;
   }
 
   .promo__gear {
@@ -271,11 +273,11 @@
 
   .promo__container {
     margin-bottom: 25px;
-    padding-top: 140px;
+    padding-top: 255px;
   }
 
   .promo__title {
-    padding-bottom: 10px;
+    margin-bottom: -130px;
     font-size: 25px;
   }
 
@@ -325,12 +327,12 @@
 
   .promo__container {
     margin-bottom: 15px;
-    padding-top: 60px;
+    padding-top: 109px;
   }
 
   .promo__title {
-    width: 100%;
-    padding-bottom: 5px;
+    width: 60%;
+    margin-bottom: -55px;
     font-size: 16px;
   }
 

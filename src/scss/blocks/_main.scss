@@ -8,12 +8,8 @@
   @include reset-list;
 }
 
-.main__promo {
-  margin-bottom: 122px;
-}
-
 .main__services {
-  margin-bottom: 122px;
+  @include padding-vertical(122px);
 }
 
 .main__news {
@@ -23,33 +19,29 @@
 
 //Desktop middle
 @include desktop-middle {
-  .main__promo {
-    margin-bottom: 90px;
-  }
-
   .main__services {
-    margin-bottom: 90px;
+    @include padding-vertical(90px);
   }
 }
 
 //Desktop Small
 @include desktop-small {
   .main__services {
-    margin-bottom: 75px;
+    @include padding-vertical(75px);
   }
 }
 
 //Tablet
 @include tablet {
   .main__services {
-    margin-bottom: 30px;
+    padding-bottom: 30px;
   }
 }
 
 //Mobile
 @include mobile {
   .main__services {
-    margin-bottom: 20px;
+    padding-bottom: 20px;
   }
 }
 

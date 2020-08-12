@@ -52,3 +52,10 @@
   animation: spin 10s infinite linear;
   fill: #939393;
 }
+
+//Tablet
+@include tablet {
+  .anchors {
+    display: none;
+  }
+}

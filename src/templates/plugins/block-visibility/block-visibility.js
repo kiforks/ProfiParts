@@ -14,7 +14,7 @@ function windowSectionActive(target, link) {
       visibleSection(target, link);
 
       // The actualResizeHandler will execute at a rate of 15fps
-    }, 600);
+    }, 66);
   }
 }
 

@@ -53,6 +53,13 @@
   fill: #939393;
 }
 
+//Desktop Middlle
+@include desktop-middle {
+  .anchors {
+    left: 17px;
+  }
+}
+
 //Tablet
 @include tablet {
   .anchors {

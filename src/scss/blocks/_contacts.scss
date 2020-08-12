@@ -50,10 +50,9 @@
   width: 20%;
 }
 
-.contacts__city,
-.contacts__time,
-.contacts__street {
+.contacts__time {
   @include reset-margin-text;
+  width: 100%;
 }
 
 .contacts__address {
@@ -167,11 +166,7 @@
 
 .contacts__city,
 .contacts__street {
-  margin-right: 6px;
-}
-
-.contacts__time {
-  width: 100%;
+  display: inline-block;
 }
 
 .contacts__city {

@@ -8,6 +8,12 @@
   @include reset-list;
 }
 
+.main__item {
+  &--moving {
+    position: relative;
+  }
+}
+
 .main__services {
   @include padding-vertical(122px);
 }

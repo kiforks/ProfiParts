@@ -20,8 +20,12 @@
 
     <ul class="main__list">
 
-      <li class="main__item">
+      <li class="main__item main__item--moving">
         <include src="src/html/blocks/_promo.html"></include>
+
+        <a href="#services" class="moving moving--down scroll"  role="button">
+          <span class="visually-hidden">Вниз</span>
+        </a>
       </li>
 
       <li class="main__item">
@@ -49,6 +53,13 @@
       </li>
 
     </ul>
+
+    <div class="moving-box">
+      <a href="#promo" class="moving moving--up scroll"  role="button">
+        <span class="visually-hidden">Вниз</span>
+      </a>
+    </div>
+
   </main>
 
   <include src="src/html/blocks/_footer.html"></include>

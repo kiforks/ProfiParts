@@ -1,0 +1,61 @@
+.moving {
+  @include center-transform-horizon;
+  @include reset-button;
+  position: absolute;
+  bottom: 20px;
+  z-index: 5;
+  width: 10px;
+  height: 20px;
+
+  @include before-after {
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 10px;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    transform: rotate(-45deg);
+    animation: arrow-movement 2s ease-in-out infinite;
+  }
+
+  @include before-clean {
+    bottom: 0;
+  }
+
+  @include after-clean {
+    bottom: 8px;
+  }
+
+  &--up {
+    bottom: 0;
+    left: 85px;
+
+    @include before-after-clean {
+      animation: arrow-movement-2 2s ease-in-out infinite;
+    }
+  }
+}
+
+.moving-box {
+  @include center-transform-horizon;
+  position: absolute;
+  bottom: 0;
+  width: 175px;
+  height: 37px;
+  background-image: url("../img/svg/moving/background.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100%;
+}
+
+
+//Tablet
+@include tablet {
+  .moving {
+    display: none;
+
+    &--up {
+      display: block;
+    }
+  }
+}

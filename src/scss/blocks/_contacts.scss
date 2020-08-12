@@ -170,7 +170,9 @@
 }
 
 .contacts__city {
+  margin-right: 6px;
   margin-bottom: 4.5%;
+  cursor: pointer;
 }
 
 .contacts__adds-inner {
@@ -355,6 +357,10 @@
     }
   }
 
+  .contacts__address-container {
+    width: 44.3%;
+  }
+
   .contacts__item {
     height: 260px;
   }
@@ -381,6 +387,18 @@
       border: 15px solid transparent;
       border-right: 15px solid $black;
     }
+  }
+
+  .contacts__city {
+    margin-right: 3px;
+  }
+
+  .contacts__wrapper {
+    width: 55.6%;
+  }
+
+  .contacts__yet {
+    font-size: 12px;
   }
 }
 

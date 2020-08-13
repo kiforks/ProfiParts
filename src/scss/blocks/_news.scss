@@ -368,6 +368,10 @@
 
 //Mobile
 @include mobile {
+  .news {
+    @include padding-vertical(15px);
+  }
+
   .news__container {
     @include container-mobile;
   }

@@ -1,0 +1,23 @@
+.main-contacts__title {
+  padding-bottom: 70px;
+
+  @include after-clean {
+    bottom: -10px;
+  }
+}
+
+.main-contacts__list {
+  @include flex;
+  @include reset-list;
+  justify-content: flex-end;
+  width: 100%;
+  color: #949494;
+}
+
+.main-contacts__item {
+  margin-right: 41px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}

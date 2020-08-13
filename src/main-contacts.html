@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <title>Новости</title>
+  <title>Ассортимент</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta charset="UTF-8">
@@ -9,20 +9,27 @@
   <link rel="stylesheet" href="css/style.min.css">
   <include src="src/html/templates/fonts.html"></include>
 </head>
-<body class="main-body">
+<body class="main-body no-fixed">
 
-  <include src="src/html/blocks/header/_news.html"></include>
+  <include src="src/html/blocks/header/_main.html"></include>
 
-  <main class="main main--news no-swiper">
+  <main class="main main--assortment">
 
-    <include src="src/html/blocks/news/_main.html"></include>
+    <include src="src/html/blocks/_main-contacts.html"></include>
+
+    <div class="moving-box">
+      <a href="#assortment__title" class="moving moving--up scroll"  role="button">
+        <span class="visually-hidden">Вниз</span>
+      </a>
+    </div>
 
   </main>
 
   <include src="src/html/blocks/_footer.html"></include>
 
   <!--JS-->
+  <script src="js/plugins/swiper.js"></script>
   <script src="js/plugins/aos.js"></script>
   <script src="js/script.js"></script>
-</body>
+  </body>
 </html>

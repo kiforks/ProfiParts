@@ -5,19 +5,20 @@ function initNewsSwiper(slider) {
 
   let mySwiper = new Swiper(`.${slider.container}`, {
     pagination: {
-      el: `.${slider.blockClass}__pagination`,
+      el: `.${slider.bulletClass}` || `.${slider.blockClass}__pagination`,
       type: `bullets`,
-      currentClass: `${slider.blockClass}__current`,
-      totalClass: `${slider.blockClass}__total`,
-      bulletClass: `${slider.blockClass}__bullet`,
-      bulletActiveClass: `${slider.blockClass}__bullet--active`,
+      currentClass: `${slider.bulletClass}__current` || `${slider.blockClass}__current`,
+      totalClass: `${slider.bulletClass}__total` || `${slider.blockClass}__total`,
+      bulletClass: `${slider.bulletClass}__bullet` || `${slider.blockClass}__bullet`,
+      bulletActiveClass: `${slider.bulletClass}__bullet--active` || `${slider.blockClass}__bullet--active`,
       clickable: true,
     },
     navigation: {
-      nextEl: `.${slider.blockClass}__button--next`,
-      prevEl: `.${slider.blockClass}__button--prev`,
-      disabledClass: `${slider.blockClass}__button--disabled`,
+      nextEl: `.${slider.buttonClass}__button--next` || `.${slider.blockClass}__button--next`,
+      prevEl: `.${slider.buttonClass}__button--prev` || `.${slider.blockClass}__button--prev`,
+      disabledClass: `${slider.buttonClass}__button--disabled` || `${slider.blockClass}__button--disabled`,
     },
+    autoplay: slider.autoplay,
     speed: 1000,
     loop: slider.loop,
     slidesPerView: slider.slidesPerView || 1,
@@ -62,7 +63,19 @@ function initNewsSwiper(slider) {
 const news = {
   container: 'news__slider',
   blockClass: 'news',
-  slidesPerView: 2
+  slidesPerView: 2,
+  buttonClass: 'slider-buttons',
+  bulletClass: 'slider-bullets'
+};
+
+const assortment = {
+  container: 'assortment__gallery',
+  blockClass: 'assortment',
+  buttonClass: 'slider-buttons',
+  bulletClass: 'slider-bullets',
+  loop: true,
+  autoplay: true
 };
 
 initNewsSwiper(news);
+initNewsSwiper(assortment);

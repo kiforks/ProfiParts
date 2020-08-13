@@ -1,0 +1,38 @@
+.slider-bullets {
+  display: none;
+}
+
+//Mobile
+@include mobile {
+  .slider-bullets {
+    @include flex;
+    @include center-margin;
+    justify-content: center;
+  }
+
+  .slider-bullets__bullet {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    border: 2px solid $black;
+    border-radius: 50%;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &--active {
+      position: relative;
+
+      @include after {
+        @include center-transform;
+        z-index: 10;
+        width: 60%;
+        height: 60%;
+        background-color: $black;
+        border-radius: 50%;
+      }
+    }
+  }
+}

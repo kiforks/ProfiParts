@@ -10,6 +10,11 @@
   &--article {
     padding-top: 4%;
   }
+
+  &--assortment {
+    padding-top: 3.8%;
+    padding-bottom: 6.3%;
+  }
 }
 
 .main__list {
@@ -49,6 +54,13 @@
 
 //Mobile
 @include mobile {
+  .main {
+    &--index,
+    &--assortment {
+      padding-bottom: 50px;
+    }
+  }
+
   .main__services {
     padding-bottom: 20px;
   }

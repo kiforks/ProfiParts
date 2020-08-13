@@ -2,6 +2,10 @@
   position: relative;
   z-index: 1;
   overflow: hidden;
+
+  &--news {
+    margin-bottom: 3%;
+  }
 }
 
 .main__list {
@@ -18,12 +22,7 @@
   @include padding-vertical(122px);
 }
 
-.main__news {
-  @include padding-vertical(10.5%);
-}
-
-
-//Desktop middle
+//Desktop Middle
 @include desktop-middle {
   .main__services {
     @include padding-vertical(90px);

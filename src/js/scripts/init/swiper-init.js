@@ -1,66 +1,7 @@
-function initSwiper(slider, thumbs) {
-  if(!slider) {
+function initNewsSwiper(slider) {
+  if(document.querySelector('.no-swiper')) {
     return;
   }
-
-  let sliderButtonPrev = document.querySelector('.contacts__button--prev');
-  let sliderButtonNext = document.querySelector('.contacts__button--next');
-  let addressList =  document.querySelectorAll('.contacts__address');
-  let sliderList =  document.querySelectorAll('.contacts__item--main');
-  let thumbsItem = document.querySelectorAll('.contacts__item--thumbs');
-
-  let thumbSlider = new Swiper(`.${thumbs.container}`, {
-    pagination: {
-      el: `.${thumbs.blockClass}__pagination`,
-      type: `bullets`,
-      currentClass: `${thumbs.blockClass}__current`,
-      totalClass: `${thumbs.blockClass}__total`,
-      bulletClass: `${thumbs.blockClass}__bullet`,
-      bulletActiveClass: `${thumbs.blockClass}__bullet--active`,
-      clickable: true,
-    },
-    speed: 1000,
-    direction: 'vertical',
-    loop: thumbs.loop,
-    slidesPerView: thumbs.slidesPerView || 1,
-    spaceBetween: thumbs.spaceBetween || 30,
-    freeMode: thumbs.freeMode,
-    watchSlidesVisibility: thumbs.watchSlidesVisibility,
-    watchSlidesProgress: thumbs.watchSlidesProgress,
-    wrapperClass: `${thumbs.blockClass}__list`,
-    slideClass: `${thumbs.blockClass}__item`,
-    slideActiveClass: `${thumbs.blockClass}__item--active`,
-    slideDuplicateActiveClass: `${thumbs.blockClass}__item-duplicate--active`,
-    slideVisibleClass: `${thumbs.blockClass}__item--visible`,
-    slideDuplicateClass: `${thumbs.blockClass}__item-duplicate`,
-    slideNextClass: `${thumbs.blockClass}__item--next`,
-    slideDuplicateNextClass: `${thumbs.blockClass}__item-duplicate--next`,
-    slidePrevClass: `${thumbs.blockClass}__item--prev`,
-    slideDuplicatePrevClass: `${thumbs.blockClass}__item-duplicate--prev`,
-    slideBlankClass: `${thumbs.blockClass}__invisible-blank`,
-    bulletClass: `${thumbs.blockClass}__bullet`,
-    bulletActiveClass: `${thumbs.blockClass}__bullet--active`,
-    modifierClass: `${thumbs.blockClass}__pagination`,
-    hiddenClass: `${thumbs.blockClass}__hidden`,
-    progressbarFillClass: `${thumbs.blockClass}__progressbar-fill`,
-    clickableClass: `${thumbs.blockClass}__clickable`,
-    lockClass: `${thumbs.blockClass}__lock`,
-    progressbarOppositeClass: `${thumbs.blockClass}__progressbar-opposite`,
-    breakpoints: {
-      320: {
-        direction: 'horizontal',
-        slidesPerView: thumbs.slidesPerViewMobile || 1,
-        spaceBetween: thumbs.spaceBetweenMobile || 5
-      },
-      768: {
-        direction: 'vertical',
-        spaceBetween: thumbs.spaceBetweenTablet || 5
-      },
-      1200: {
-        spaceBetween: thumbs.spaceBetween || 30
-      }
-    }
-  });
 
   let mySwiper = new Swiper(`.${slider.container}`, {
     pagination: {
@@ -77,19 +18,8 @@ function initSwiper(slider, thumbs) {
       prevEl: `.${slider.blockClass}__button--prev`,
       disabledClass: `${slider.blockClass}__button--disabled`,
     },
-    thumbs: {
-      swiper: thumbSlider,
-      slideThumbActiveClass: `${thumbs.blockClass}__thumb--active`,
-      thumbsContainerClass: `${thumbs.container}-container`,
-    },
     speed: 1000,
-    autoplay: {
-      delay: 5000
-    },
     loop: slider.loop,
-    freeMode: slider.freeMode,
-    watchSlidesVisibility: slider.watchSlidesVisibility,
-    watchSlidesProgress: slider.watchSlidesProgress,
     slidesPerView: slider.slidesPerView || 1,
     spaceBetween: slider.spaceBetween || 30,
     freeMode: slider.freeMode,
@@ -114,51 +44,25 @@ function initSwiper(slider, thumbs) {
     clickableClass: `${slider.blockClass}__clickable`,
     lockClass: `${slider.blockClass}__lock`,
     progressbarOppositeClass: `${slider.blockClass}__progressbar-opposite`,
-  });
-
-  function sliderToggle() {
-    sliderList.forEach((slider, index) => {
-      if(sliderList[index].classList.contains('contacts__item--active')) {
-        addressList.forEach(address => {
-          address.classList.remove('contacts__address--active');
-        });
-
-        addressList[index].classList.add('contacts__address--active');
+    breakpoints: {
+      320: {
+        slidesPerView: slider.slidesPerViewMobile || 1
+      },
+      768: {
+        spaceBetween: slider.spaceBetweenTablet || 15
+      },
+      1200: {
+        spaceBetween: slider.spaceBetween || 30
       }
-    })
-  }
-
-  sliderButtonNext.onclick = () => sliderToggle();
-
-  sliderButtonPrev.onclick = () => sliderToggle(true);
-
-  thumbsItem.forEach(button => button.onclick = () => sliderToggle(false, true));
-
-  mySwiper.on('slideChange', function () {
-    setTimeout(() => {
-      sliderToggle()
-    }, 0);
+    }
   });
 }
 
-const contacts = {
-  container: 'contacts__inner--main',
-  blockClass: 'contacts',
-  slidesPerView: 1
+
+const news = {
+  container: 'news__slider',
+  blockClass: 'news',
+  slidesPerView: 2
 };
 
-const thumbs = {
-  container: 'contacts__inner--thumbs',
-  blockClass: 'contacts',
-  slidesPerView: 4,
-  freeMode: true,
-  watchSlidesVisibility: true,
-  watchSlidesProgress: true,
-  spaceBetween: 9,
-  slidesPerViewMobile: 4
-};
-
-initSwiper(contacts, thumbs);
-
-
-
+initNewsSwiper(news);

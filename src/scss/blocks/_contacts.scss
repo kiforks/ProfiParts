@@ -170,11 +170,10 @@
 }
 
 .contacts__city {
+  @include focus-opacity;
   margin-right: 6px;
   margin-bottom: 4.5%;
   cursor: pointer;
-
-  @include focus-opacity;
 }
 
 .contacts__adds-inner {

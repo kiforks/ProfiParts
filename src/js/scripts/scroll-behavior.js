@@ -8,19 +8,17 @@ for (let anchor of anchors) {
 
     document.getElementById(blockID).scrollIntoView({
       behavior: 'smooth',
-      block: 'start'
+      block: 'center'
     })
   })
 }
 
-let scrolltop = pageYOffset;
-const toggleClass = document.querySelector(".header");
+const toggleClass = document.querySelector('.header');
 
-window.addEventListener("scroll", function () {
-  if (pageYOffset > scrolltop) {
-    toggleClass.classList.add("header--fixed");
+window.addEventListener('scroll',  () => {
+  if (window.pageYOffset > toggleClass.getBoundingClientRect().bottom - 75) {
+    toggleClass.classList.add('header--fixed');
   } else {
-    toggleClass.classList.remove("header--fixed");
+    toggleClass.classList.remove('header--fixed');
   }
-  scrolltop = pageYOffset;
 });

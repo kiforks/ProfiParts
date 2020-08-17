@@ -9,17 +9,22 @@
   <link rel="stylesheet" href="css/style.min.css">
   <include src="src/html/templates/fonts.html"></include>
 </head>
-<body class="main-body no-fixed">
+<body class="main-body">
 
-  <include src="src/html/blocks/header/_main.html"></include>
 
-  <main class="main main--assortment">
+  <include src="src/html/blocks/header/_assortment.html"></include>
+
+  <h1 id="title" data-aos="fade" class="container subtitle main__title">Контакты</h1>
+
+  <include src="src/html/blocks/_contacts-nav.html"></include>
+
+  <main class="main main--contacts">
 
     <include src="src/html/blocks/_main-contacts.html"></include>
 
     <div class="moving-box">
-      <a href="#assortment__title" class="moving moving--up scroll"  role="button">
-        <span class="visually-hidden">Вниз</span>
+      <a href="#title" class="moving moving--up scroll" role="button">
+        <span class="visually-hidden">Вверх</span>
       </a>
     </div>
 
@@ -31,5 +36,5 @@
   <script src="js/plugins/swiper.js"></script>
   <script src="js/plugins/aos.js"></script>
   <script src="js/script.js"></script>
-  </body>
+</body>
 </html>

@@ -13,8 +13,8 @@
   margin-bottom: 1%;
   color: #949494;
   background-color: white;
-  opacity: 0;
   transform: translateY(-1000%);
+  opacity: 0;
 
   @include after {
     @include center-transform-vertical;

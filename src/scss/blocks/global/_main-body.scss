@@ -1,0 +1,9 @@
+.main-body {
+  &--active {
+    overflow: hidden;
+
+    .header {
+      opacity: 0;
+    }
+  }
+}

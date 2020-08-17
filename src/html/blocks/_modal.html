@@ -1,0 +1,23 @@
+<section class="modal" role="dialog">
+  <h2 class="visually-hidden">Модальное окно</h2>
+
+  <form action="post" class="modal__form">
+    <h3 class="modal__title">Обратная связь</h3>
+    <button class="modal__button">
+      <span class="visually-hidden">Закрыть окно</span>
+    </button>
+    <div class="modal__wrapper">
+      <div class="modal__inner modal__inner--name">
+        <label for="modal__input--name" class="modal__label">Имя:</label>
+        <input type="text" class="modal__input modal__input--name" id="modal__input--name" required>
+      </div>
+      <div class="modal__inner">
+        <label for="modal__input--tel" class="modal__label">Телефонный номер:</label>
+        <input type="text" class="modal__input modal__input--name" id="modal__input--tel" placeholder="(_ _ _) _ _ _  _ _  _ _" required>
+      </div>
+      <label for="modal__input--comments" class="modal__label">Комментарий</label>
+      <textarea name="modal__input--comments" id="modal__input--comments" class="modal__input modal__input--comments"></textarea>
+    </div>
+    <button class="button modal__form-button">Отправить</button>
+  </form>
+</section>

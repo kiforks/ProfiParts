@@ -101,7 +101,7 @@
 }
 
 .header__main-link {
-  padding-left: 16%;
+  justify-content: center;
 
   @include active {
     .header__icon {
@@ -155,10 +155,6 @@
 @include desktop-middle {
   .header {
     font-size: 12px;
-  }
-
-  .header__main-link {
-    padding-left: 30px;
   }
 }
 
@@ -396,10 +392,6 @@
     padding-top: 15px;
     transform: scale(1);
     transition: opacity 0.5s ease, transform 0.5s ease;
-  }
-
-  .header__main-link {
-    padding-left: 45px;
   }
 
   .header__item,

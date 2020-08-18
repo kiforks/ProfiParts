@@ -4,7 +4,7 @@
   overflow: hidden;
 
   &--news {
-    margin-bottom: 3%;
+    padding-bottom: 3%;
   }
 
   &--article {
@@ -70,7 +70,9 @@
 @include mobile {
   .main {
     &--index,
-    &--assortment {
+    &--assortment,
+    &--article,
+    &--news {
       padding-bottom: 50px;
     }
   }

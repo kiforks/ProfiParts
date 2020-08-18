@@ -94,6 +94,8 @@
   right: 5%;
   bottom: 9%;
   z-index: 10;
+  display: block;
+  text-align: center;
 
   @include after-clean {
     display: none;

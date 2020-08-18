@@ -46,5 +46,6 @@ toggleSelectors('header__main-link', 'main-body');
 toggleSelectors('modal__button', 'main-body');
 toggleSelectors('header__main-link', 'modal');
 toggleSelectors('modal__button', 'modal');
-
+toggleSelectors('modal__form-button--link', 'main-body');
+toggleSelectors('modal__form-button--link', 'modal');
 

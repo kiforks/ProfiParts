@@ -83,11 +83,6 @@
   margin-bottom: 4%;
 }
 
-.main-contacts__map {
-  @include object-fit(cover);
-  width: 100%;
-}
-
 .main-contacts__map-link {
   @include padding-horizon(3%);
   position: absolute;
@@ -102,10 +97,55 @@
   }
 }
 
+.main-contacts__map {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .main-contacts__map-box {
   position: relative;
   width: 60%;
   height: 435px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+
+  &--vinnitsya {
+    background-image: url("../img/main/main-contacts/map-1.jpg");
+  }
+
+  &--dnipro {
+    background-image: url("../img/main/main-contacts/map-2.jpg");
+  }
+
+  &--kyiv {
+    background-image: url("../img/main/main-contacts/map-3.jpg");
+  }
+
+  &--kyiv-2 {
+    background-image: url("../img/main/main-contacts/map-4.jpg");
+  }
+
+  &--lviv {
+    background-image: url("../img/main/main-contacts/map-5.jpg");
+  }
+
+  &--odessa {
+    background-image: url("../img/main/main-contacts/map-6.jpg");
+  }
+
+  &--poltava {
+    background-image: url("../img/main/main-contacts/map-7.jpg");
+  }
+
+  &--kharkiv {
+    background-image: url("../img/main/main-contacts/map-8.jpg");
+  }
+
+  &--cherkasy {
+    background-image: url("../img/main/main-contacts/map-9.jpg");
+  }
 }
 
 //Desktop Middle

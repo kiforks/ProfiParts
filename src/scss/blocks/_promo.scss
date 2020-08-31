@@ -375,6 +375,10 @@
     margin-bottom: 10px;
     padding: 0;
     text-align: center;
+
+    @include after-clean {
+      display: none;
+    }
   }
 
   .promo__description {

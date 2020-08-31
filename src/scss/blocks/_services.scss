@@ -54,7 +54,7 @@
 .services__description-box {
   position: relative;
   display: inline-block;
-  padding-bottom: 1%;
+  padding-bottom: 2%;
   text-shadow: -16px 24px 24px rgba(0, 0, 0, 0.25);
 
   @include after {
@@ -62,8 +62,8 @@
     bottom: 0;
     z-index: -1;
     width: 104%;
-    height: 56%;
-    background-color: $grey;
+    height: 2px;
+    background-color: white;
   }
 }
 
@@ -184,6 +184,15 @@
   .services__link {
     height: 406px;
   }
+
+  .services__description-box {
+    padding-bottom: 3%;
+
+    @include after-clean {
+      width: 100%;
+      height: 1px;
+    }
+  }
 }
 
 
@@ -215,6 +224,15 @@
   .services__price-box {
     &--smaller {
       font-size: 17px;
+    }
+  }
+
+  .services__description-box {
+    padding-bottom: 3%;
+
+    @include after-clean {
+      width: 100%;
+      height: 1px;
     }
   }
 }

@@ -1,0 +1,232 @@
+.documentation__title {
+  @include reset-margin-text;
+  position: relative;
+  margin-bottom: 6%;
+  padding-bottom: 4%;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 60px;
+  color: $black;
+
+  @include after {
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    width: 109px;
+    height: 2px;
+    background-color: $black;
+  }
+}
+
+.documentation__section {
+  &--certificates {
+    margin-bottom: 5.5%;
+  }
+
+  &--contracts {
+    position: relative;
+    margin-bottom: 4%;
+    padding-top: 5.5%;
+    padding-bottom: 4%;
+
+    @include before {
+      @include center-transform;
+      z-index: -1;
+      width: 2000px;
+      height: 100%;
+      background: #EFF5FA;
+    }
+  }
+}
+
+.documentation__subtitle {
+  @include reset-margin-text;
+  margin-bottom: 4%;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: $black;
+}
+
+.documentation__list {
+  @include reset-list;
+}
+
+.documentation__item {
+  @include flex;
+  width: 100%;
+  padding: 1.2% 3% 1.5%;
+  border-bottom: 2px solid $black;
+
+  &:first-of-type {
+    padding-top: 0;
+  }
+
+  &:last-of-type {
+    border-bottom: 0;
+  }
+}
+
+.documentation__link {
+  @include focus-color($red);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 36px;
+  color: $black;
+}
+
+.documentation__icon {
+  @include focus-fill($red);
+}
+
+.documentation__download {
+  @include focus-scale-opacity;
+  display: block;
+  width: 22px;
+  height: 22px;
+  margin-top: 1.8%;
+  margin-left: auto;
+  background-image: url("../img/svg/documentation/download.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 22px;
+}
+
+.documentation__link-icon {
+  display: flex;
+  align-items: center;
+  width: 35px;
+  margin-right: 2%;
+}
+
+.documentation__size {
+  @include reset-margin-text;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+  color: #4F4F4F;
+}
+
+.documentation__pagination-list {
+  @include flex;
+  @include reset-list;
+  justify-content: flex-end;
+  width: 100%;
+  line-height: 28px;
+  color: $grey;
+}
+
+.documentation__pagination-item {
+  margin-right: 21px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.documentation__pagination-link {
+  @include focus-opacity;
+}
+
+//Desktop middle
+@include desktop-middle {
+  .documentation__title {
+    font-size: 48px;
+    line-height: 120%;
+  }
+
+  .documentation__pagination-list {
+    line-height: 120%;
+  }
+
+  .documentation__subtitle {
+    font-size: 18px;
+    line-height: 160%;
+  }
+
+  .documentation__link {
+    font-size: 14px;
+    line-height: 160%;
+  }
+
+  .documentation__size {
+    font-size: 12px;
+    line-height: 160%;
+  }
+}
+
+//Desktop small
+@include desktop-small {
+  .documentation__title {
+    font-size: 43px;
+  }
+
+  .documentation__subtitle {
+    font-size: 16px;
+  }
+
+  .documentation__link {
+    font-size: 12px;
+  }
+
+  .documentation__size {
+    font-size: 10px;
+  }
+}
+
+//Tablet
+@include tablet {
+  .documentation__title {
+    font-size: 35px;
+  }
+
+  .documentation__subtitle {
+    font-size: 14px;
+  }
+
+  .documentation__link {
+    font-size: 10px;
+  }
+
+  .documentation__size {
+    font-size: 8px;
+  }
+
+  .documentation__download {
+    width: 17px;
+    height: 17px;
+    background-size: 100%;
+  }
+}
+
+//Mobile
+@include tablet {
+  .documentation__title {
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 25px;
+
+    @include after-clean {
+      bottom: 0;
+    }
+  }
+
+  .documentation__item {
+    align-items: center;
+    margin-bottom: 5%;
+  }
+
+  .documentation__download {
+    background-size: 100%;
+  }
+
+  .documentation__link-icon {
+    width: 24px;
+  }
+
+  .documentation__section {
+    &--contracts {
+      margin-bottom: 15px;
+    }
+  }
+}

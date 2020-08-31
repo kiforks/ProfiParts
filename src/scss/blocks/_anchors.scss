@@ -53,6 +53,12 @@
   fill: #939393;
 }
 
+@media (max-width: 1700px) {
+  .anchors {
+    left: 5%;
+  }
+}
+
 //Desktop Middlle
 @include desktop-middle {
   .anchors {

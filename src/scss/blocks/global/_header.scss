@@ -476,6 +476,7 @@
   .header {
     min-height: auto;
     padding-bottom: 10px;
+    opacity: 1;
 
     &--active {
       .header__nav {
@@ -513,7 +514,8 @@
   }
 
   .header__button-box {
-    margin-left: auto;
+    order: -1;
+    margin-right: auto;
   }
 
   .header__container {

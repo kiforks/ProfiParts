@@ -94,5 +94,15 @@
   .main-title {
     padding-top: 36.5%;
   }
+
+  .main__item {
+    &--moving {
+      display: none;
+    }
+
+    &--services {
+      padding-top: 90px;
+    }
+  }
 }
 

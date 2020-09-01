@@ -1,38 +1,51 @@
 .promo {
   position: relative;
-  padding-bottom: 5%;
+  padding-bottom: 5.7%;
   font-weight: 600;
   line-height: 60px;
   color: white;
   text-shadow: -16px 24px 24px rgba(0, 0, 0, 0.25);
   background-color: #0F0F11;
-  background-image: url("../img/svg/promo/logo.svg"), url("../img/main/promo/car.jpg");
+  background-image: url("../img/svg/promo/logo.svg"), linear-gradient(109.75deg, #040404 0%, #343437 80.57%);
   background-repeat: no-repeat, no-repeat;
   background-position: 28% 10%, 0 0;
   background-size: 57%, cover;
+
+  @include after {
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    width: 29.2%;
+    height: 96%;
+    background-image: url("../img/main/promo/car.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+  }
 }
 
 .promo__container {
-  padding-top: 22.7%;
+  position: relative;
+  z-index: 100;
+  padding-top: 23.4%;
 }
 
 .promo__motion {
   display: block;
-  font-size: 40px;
   color: #333333;
 }
 
 .promo__motion-title {
   display: block;
-  margin-bottom: 9%;
+  margin-bottom: 7%;
 }
 
 .promo__title {
   @include reset-margin-text;
-  margin-bottom: 15%;
-  padding-right: 24%;
-  padding-left: 6.5%;
-  font-size: 45px;
+  margin-bottom: 10.2%;
+  padding-right: 22%;
+  padding-left: 3.5%;
+  font-size: 38px;
   line-height: 55px;
   text-align: right;
 }
@@ -41,14 +54,14 @@
   @include reset-margin-text;
   @include center-margin;
   width: 55%;
-  font-size: 45px;
+  font-size: 50px;
   text-align: center;
   color: $grey;
 }
 
 .promo__gear {
   position: absolute;
-  bottom: 5%;
+  bottom: 5.8%;
   left: 0;
   z-index: 10;
   display: flex;
@@ -180,10 +193,6 @@
 
 //Desktop Middle
 @include desktop-middle {
-  .promo {
-    background-size: 57%, 100%;
-  }
-
   .promo__container {
     margin-bottom: 0;
     padding-top: 23%;
@@ -191,17 +200,17 @@
 
   .promo__description,
   .promo__title {
-    font-size: 35px;
     line-height: 160%;
-  }
-
-  .promo__motion {
-    font-size: 30px;
   }
 
   .promo__title {
     margin-bottom: 9%;
     padding-right: 28%;
+    font-size: 30px;
+  }
+
+  .promo__description {
+    font-size: 40px;
   }
 
   .promo__motion-title {
@@ -209,6 +218,7 @@
   }
 
   .promo__gear {
+    bottom: 7%;
     height: 225px;
 
     @include after-clean {
@@ -250,18 +260,14 @@
 
 //Desktop small
 @include desktop-small {
-  .promo__description,
-  .promo__title {
-    font-size: 30px;
-  }
-
-  .promo__motion {
-    font-size: 25px;
+  .promo__description {
+    font-size: 35px;
   }
 
   .promo__title {
     margin-bottom: 10%;
     padding-right: 27%;
+    font-size: 27px;
   }
 
   .promo__motion-title {
@@ -269,6 +275,7 @@
   }
 
   .promo__gear {
+    bottom: 6%;
     height: 190px;
   }
 
@@ -303,17 +310,16 @@
     padding-bottom: 38px;
   }
 
-  .promo__description,
+  .promo__description {
+    font-size: 25px;
+  }
+
   .promo__title {
     font-size: 20px;
   }
 
-  .promo__motion {
-    font-size: 15px;
-  }
-
   .promo__gear {
-    bottom: 2%;
+    bottom: 4%;
     height: 130px;
 
     @include before-clean {
@@ -359,21 +365,12 @@
 @include mobile {
   .promo {
     padding-bottom: 0;
-    background-size: 57%, cover;
-  }
-
-  .promo__description,
-  .promo__title {
-    font-size: 15px;
-  }
-
-  .promo__motion {
-    font-size: 10px;
   }
 
   .promo__title {
     margin-bottom: 10px;
     padding: 0;
+    font-size: 12px;
     text-align: center;
 
     @include after-clean {
@@ -383,10 +380,11 @@
 
   .promo__description {
     width: 60%;
+    font-size: 18px;
   }
 
   .promo__gear {
-    bottom: 5%;
+    bottom: 7%;
     height: 32px;
 
     @include before-after-clean {

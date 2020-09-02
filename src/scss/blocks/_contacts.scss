@@ -427,6 +427,7 @@
     @include flex;
     @include container-mobile;
     @include padding-vertical(30px);
+    padding-bottom: 75px;
     background-size: 225px;
   }
 

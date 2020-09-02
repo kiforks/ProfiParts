@@ -5,6 +5,10 @@
   color: white;
 }
 
+.services__box {
+  position: relative;
+}
+
 .services__container {
   @include padding-horizon(225px);
   @include center-margin;

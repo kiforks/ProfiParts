@@ -1,4 +1,5 @@
 .ref {
+  position: relative;
   padding-top: 10.1%;
   padding-bottom: 9.8%;
 }
@@ -71,6 +72,10 @@
 
 //Mobile
 @include mobile {
+  .ref {
+    padding-bottom: 90px;
+  }
+
   .ref__title {
     @include padding-horizon(0);
     padding-bottom: 5px;

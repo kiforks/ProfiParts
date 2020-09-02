@@ -361,73 +361,73 @@
   }
 }
 
-//Mobile
-@include mobile {
-  .promo {
-    padding-bottom: 0;
-  }
-
-  .promo__title {
-    margin-bottom: 10px;
-    padding: 0;
-    font-size: 12px;
-    text-align: center;
-
-    @include after-clean {
-      display: none;
-    }
-  }
-
-  .promo__description {
-    width: 60%;
-    font-size: 18px;
-  }
-
-  .promo__gear {
-    bottom: 7%;
-    height: 32px;
-
-    @include before-after-clean {
-      height: 1px;
-    }
-
-    @include before-clean {
-      width: 80%;
-
-      @media (min-width: 375px) {
-        width: 82%;
-      }
-    }
-
-    @include after-clean {
-      width: 5%;
-    }
-  }
-
-  .promo__wrapper {
-    &--large {
-      width: 32px;
-      height: 32px;
-    }
-
-    &--small {
-      width: 25px;
-      height: 25px;
-      margin-left: -4px;
-    }
-
-    &--light {
-      left: 30%;
-      display: none;
-      width: 10px;
-      height: 10px;
-    }
-
-    &--light-large {
-      left: 43%;
-      display: none;
-      width: 15px;
-      height: 15px;
-    }
-  }
-}
+////Mobile
+//@include mobile {
+//  .promo {
+//    padding-bottom: 0;
+//  }
+//
+//  .promo__title {
+//    margin-bottom: 10px;
+//    padding: 0;
+//    font-size: 12px;
+//    text-align: center;
+//
+//    @include after-clean {
+//      display: none;
+//    }
+//  }
+//
+//  .promo__description {
+//    width: 60%;
+//    font-size: 18px;
+//  }
+//
+//  .promo__gear {
+//    bottom: 7%;
+//    height: 32px;
+//
+//    @include before-after-clean {
+//      height: 1px;
+//    }
+//
+//    @include before-clean {
+//      width: 80%;
+//
+//      @media (min-width: 375px) {
+//        width: 82%;
+//      }
+//    }
+//
+//    @include after-clean {
+//      width: 5%;
+//    }
+//  }
+//
+//  .promo__wrapper {
+//    &--large {
+//      width: 32px;
+//      height: 32px;
+//    }
+//
+//    &--small {
+//      width: 25px;
+//      height: 25px;
+//      margin-left: -4px;
+//    }
+//
+//    &--light {
+//      left: 30%;
+//      display: none;
+//      width: 10px;
+//      height: 10px;
+//    }
+//
+//    &--light-large {
+//      left: 43%;
+//      display: none;
+//      width: 15px;
+//      height: 15px;
+//    }
+//  }
+//}

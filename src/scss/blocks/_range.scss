@@ -1,3 +1,7 @@
+.range {
+  position: relative;
+}
+
 .range__container {
   @include container(1390px);
   @include padding-vertical(3.8%);
@@ -126,6 +130,7 @@
     @include padding-tablet;
     @include center-margin;
     width: $tablet-width;
+    padding-bottom: 50px;
   }
 
   .range__title {
@@ -148,6 +153,7 @@
     @include padding-mobile;
     width: 100%;
     padding-top: 25px;
+    padding-bottom: 75px;
   }
 
   .range__title {

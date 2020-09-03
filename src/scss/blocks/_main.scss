@@ -12,7 +12,7 @@
   }
 
   &--assortment {
-    padding-top: 3.8%;
+    padding-top: 7%;
     padding-bottom: 6.3%;
   }
 
@@ -42,7 +42,7 @@
 
 .main-title {
   margin-bottom: 1%;
-  padding-top: 3.8%;
+  padding-top: 6%;
   padding-bottom: 0;
 
   @include after-clean {
@@ -66,8 +66,20 @@
 
 //Tablet
 @include tablet {
+  .main {
+    &--article,
+    &--assortment,
+    &--documentation {
+      padding-top: 90px;
+    }
+  }
+
   .main__services {
     padding-bottom: 30px;
+  }
+
+  .main-title {
+    padding-top: 90px;
   }
 }
 
@@ -82,9 +94,16 @@
       padding-bottom: 50px;
     }
 
+    &--article,
+    &--assortment,
+    &--news,
     &--documentation {
-      padding-top: 20%;
+      padding-top: 50%;
     }
+    //
+    //&--news {
+    //  padding-top: 62%;
+    //}
   }
 
   .main__services {
@@ -92,7 +111,7 @@
   }
 
   .main-title {
-    padding-top: 36.5%;
+    padding-top: 50%;
   }
 
   .main__item {

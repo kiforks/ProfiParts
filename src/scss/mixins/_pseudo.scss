@@ -154,18 +154,6 @@
   }
 }
 
-@mixin focus-fill($color: white) {
-  outline: 0;
-  transition: fill $transition-duration ease-in-out, opacity $transition-duration ease-in-out;
-  @include active-opacity;
-
-  &:hover,
-  &:focus {
-    fill: $color;
-  }
-}
-
-
 @mixin disabled-before {
   &::before,
   &:active::before,

@@ -1,6 +1,6 @@
 .anchors {
   position: fixed;
-  top: 37.4%;
+  top: 44.4%;
   left: 11.6%;
   z-index: 1000;
   color: white;
@@ -51,12 +51,6 @@
   opacity: 0;
   animation: spin 10s infinite linear;
   fill: #939393;
-}
-
-@media (max-width: 1700px) {
-  .anchors {
-    left: 5%;
-  }
 }
 
 //Desktop Middlle

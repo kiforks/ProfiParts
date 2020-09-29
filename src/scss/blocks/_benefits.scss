@@ -1,5 +1,4 @@
 .benefits {
-  position: relative;
   line-height: 26px;
   color: $black-light;
   background-color: $blue;
@@ -117,7 +116,6 @@
 //Tablet
 @include tablet {
   .benefits {
-    padding-bottom: 35px;
     font-size: 10px;
   }
 
@@ -136,10 +134,6 @@
 
 //Mobile
 @include mobile {
-  .benefits {
-    padding-bottom: 70px;
-  }
-
   .benefits__container {
     @include container-mobile;
     @include padding-vertical(10%);

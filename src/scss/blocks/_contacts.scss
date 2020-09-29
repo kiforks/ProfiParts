@@ -58,7 +58,7 @@
 .contacts__address {
   @include flex;
   position: relative;
-  margin-bottom: 4.3%;
+  margin-bottom: 6px;
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
@@ -75,29 +75,30 @@
 
   &:first-of-type {
     .contacts__button-toggle {
-      margin-left: 5px;
+      margin-left: 16px;
     }
   }
 
   &--active {
     margin-bottom: 7%;
-    padding-bottom: 1.9%;
+    padding-bottom: 5%;
 
     @include after-clean {
       @include transition;
       height: 2px;
     }
 
+    .contacts__box {
+      @include after-clean {
+        height: 20px;
+      }
+    }
+
     .contacts__adds-wrapper {
       @include flex;
-      position: relative;
-      top: 0;
+      position: static;
       visibility: visible;
       opacity: 1;
-
-      @include after-clean {
-        height: 100%;
-      }
     }
 
     .contacts__button-toggle {
@@ -117,19 +118,16 @@
 .contacts__box {
   @include flex;
   position: relative;
-  margin-bottom: 1%;
-  font-weight: bold;
-  color: $black;
 
-  //@include after {
-  //  top: 11px;
-  //  left: 0;
-  //  z-index: -1;
-  //  width: 100%;
-  //  height: 0;
-  //  background-color: #DCDCDC;
-  //  transition: height $transition-duration ease-in-out;
-  //}
+  @include after {
+    top: 11px;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 0;
+    background-color: #DCDCDC;
+    transition: height $transition-duration ease-in-out;
+  }
 }
 
 .contacts__button-toggle {
@@ -156,19 +154,8 @@
   position: absolute;
   top: -10000px;
   align-items: flex-start;
-  padding: 2.5% 11% 3% 2%;
   visibility: hidden;
   opacity: 0;
-
-  @include after {
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 0;
-    background-color: #EFF5FA;
-    transition: height $transition-duration ease-in-out;
-  }
 }
 
 .contacts__street,
@@ -184,6 +171,8 @@
 
 .contacts__city {
   @include focus-opacity;
+  margin-right: 6px;
+  margin-bottom: 4.5%;
   cursor: pointer;
 }
 
@@ -357,12 +346,9 @@
   }
 
   .contacts__address {
-    margin-bottom: 3.5%;
     font-size: 9px;
 
     &--active {
-      margin-bottom: 3%;
-
       .contacts__box {
         @include after-clean {
           top: 5px;
@@ -427,7 +413,6 @@
     @include flex;
     @include container-mobile;
     @include padding-vertical(30px);
-    padding-bottom: 75px;
     background-size: 225px;
   }
 

@@ -152,7 +152,7 @@ const contacts = {
 const thumbs = {
   container: 'contacts__inner--thumbs',
   blockClass: 'contacts',
-  slidesPerView: 4,
+  slidesPerView: 3,
   freeMode: true,
   watchSlidesVisibility: true,
   watchSlidesProgress: true,
